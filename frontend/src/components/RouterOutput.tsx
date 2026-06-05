@@ -81,7 +81,7 @@ export function RouterOutput({ result, threshold }: Props) {
                     <span className="text-xs font-bold text-slate-100">Threshold Block (No Route Match)</span>
                   </div>
                   <p className="text-[10px] text-slate-400 leading-relaxed">
-                    The router's confidence score ({confidencePercent}%) was below your specified threshold ({Math.round(threshold * 100)}%). Fallback execution triggered.
+                    
                   </p>
                 </div>
               )}
