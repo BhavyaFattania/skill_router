@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@lancedb/lancedb": "^0.30.0",
-    "@langchain/core": "^1.1.48",
-    "@langchain/openai": "^1.4.7",
+    "@langchain/core": "^0.3.0",
+    "@langchain/openai": "^0.3.0",
     "@xenova/transformers": "^2.0.1",
-    "apache-arrow": "^21.1.0",
+    "apache-arrow": "18.1.0",
     "chromadb": "^3.4.3",
     "concurrently": "^9.2.1",
     "cors": "^2.8.5",
@@ -44,5 +44,8 @@
     "typescript": "^5.7.2",
     "vite": "^6.0.3",
     "vitest": "^4.1.8"
+  },
+  "overrides": {
+    "@langchain/core": "^0.3.0"
   }
 }
