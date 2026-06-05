@@ -1,0 +1,48 @@
+{
+  "name": "skill-router",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "tsx watch backend/src/api/server.ts",
+    "dev:frontend": "vite --config frontend/vite.config.ts --host 0.0.0.0",
+    "index": "tsx backend/src/indexing/cli.ts",
+    "evaluate": "tsx backend/src/evaluation/cli.ts",
+    "evaluate:special": "tsx backend/src/evaluation/cli.ts --special",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lancedb/lancedb": "^0.30.0",
+    "@langchain/core": "^1.1.48",
+    "@langchain/openai": "^1.4.7",
+    "@xenova/transformers": "^2.0.1",
+    "apache-arrow": "^21.1.0",
+    "chromadb": "^3.4.3",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "langfuse": "^3.38.20",
+    "langfuse-langchain": "^3.38.20",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsx": "^4.20.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vitest": "^4.1.8"
+  }
+}

@@ -1,0 +1,1508 @@
+[
+  {
+    "id": "task_001",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Run this Python script and show me the output.",
+    "relevantSkills": [
+      "CodeExecutor"
+    ],
+    "rationale": "User explicitly asks to run/execute code and see output — direct match to CodeExecutor."
+  },
+  {
+    "id": "task_002",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Translate this paragraph from English to German.",
+    "relevantSkills": [
+      "LanguageTranslator"
+    ],
+    "rationale": "Clear translation request between two specified languages — direct match to LanguageTranslator."
+  },
+  {
+    "id": "task_003",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Create a bar chart showing monthly revenue by product category from this CSV.",
+    "relevantSkills": [
+      "DataVisualizer"
+    ],
+    "rationale": "Explicit chart creation request from structured data — direct match to DataVisualizer."
+  },
+  {
+    "id": "task_004",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Write a user story for a two-factor authentication feature including acceptance criteria.",
+    "relevantSkills": [
+      "UserStoryWriter"
+    ],
+    "rationale": "Clear request for user stories with acceptance criteria — direct match to UserStoryWriter."
+  },
+  {
+    "id": "task_005",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Fill in this W-9 tax form PDF with the contractor's information.",
+    "relevantSkills": [
+      "PDFFormFiller"
+    ],
+    "rationale": "Explicit PDF form-filling request — direct match to PDFFormFiller."
+  },
+  {
+    "id": "task_006",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Schedule a recurring team standup every Tuesday and Thursday at 9am PST.",
+    "relevantSkills": [
+      "CalendarEventScheduler"
+    ],
+    "rationale": "Explicit recurring calendar event creation request — direct match to CalendarEventScheduler."
+  },
+  {
+    "id": "task_007",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Extract all text and tables from this PDF report.",
+    "relevantSkills": [
+      "PDFReader"
+    ],
+    "rationale": "Clear request to read and extract content from a PDF — direct match to PDFReader."
+  },
+  {
+    "id": "task_008",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Create a new GitHub issue for the login button not responding on mobile Safari.",
+    "relevantSkills": [
+      "GitHubIssueCreator"
+    ],
+    "rationale": "Explicit request to file a new GitHub issue — direct match to GitHubIssueCreator."
+  },
+  {
+    "id": "task_009",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Write a cold outreach email to a VP of Engineering at a mid-size fintech company.",
+    "relevantSkills": [
+      "EmailDraftComposer"
+    ],
+    "rationale": "Explicit email drafting request — direct match to EmailDraftComposer."
+  },
+  {
+    "id": "task_010",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Generate a Python function that flattens a nested dictionary into a single-level dict.",
+    "relevantSkills": [
+      "CodeGenerator"
+    ],
+    "rationale": "Clear request to generate new code from a specification — direct match to CodeGenerator."
+  },
+  {
+    "id": "task_011",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Summarize this 60-page annual report into a short executive summary.",
+    "relevantSkills": [
+      "DocumentSummarizer"
+    ],
+    "rationale": "Straightforward summarization of a long document — direct match to DocumentSummarizer."
+  },
+  {
+    "id": "task_012",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Give me a structured risk register for our upcoming cloud infrastructure migration.",
+    "relevantSkills": [
+      "RiskAssessor"
+    ],
+    "rationale": "Explicit risk register request for a project — direct match to RiskAssessor."
+  },
+  {
+    "id": "task_013",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Process this invoice PDF and pull out all the line items, amounts, and due date.",
+    "relevantSkills": [
+      "InvoiceProcessor"
+    ],
+    "rationale": "Explicit invoice data extraction request — direct match to InvoiceProcessor."
+  },
+  {
+    "id": "task_014",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Write an SOP document for the employee offboarding process at our company.",
+    "relevantSkills": [
+      "SOPGenerator"
+    ],
+    "rationale": "Clear request for a Standard Operating Procedure document — direct match to SOPGenerator."
+  },
+  {
+    "id": "task_015",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "What's the status of issue #312 in our backend repository?",
+    "relevantSkills": [
+      "GitHubIssueReader"
+    ],
+    "rationale": "Clear request to read a specific GitHub issue — direct match to GitHubIssueReader."
+  },
+  {
+    "id": "task_016",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Review PR #204 and tell me if there are any bugs or logic errors in the diff.",
+    "relevantSkills": [
+      "GitHubPRReviewer"
+    ],
+    "rationale": "Explicit pull request review request — direct match to GitHubPRReviewer."
+  },
+  {
+    "id": "task_017",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Build a project plan for a mobile app launch scheduled for 4 months from now.",
+    "relevantSkills": [
+      "ProjectPlanGenerator"
+    ],
+    "rationale": "Clear request for a project plan with timeline — direct match to ProjectPlanGenerator."
+  },
+  {
+    "id": "task_018",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Create a monthly budget template for our marketing department with spending categories.",
+    "relevantSkills": [
+      "BudgetPlanner"
+    ],
+    "rationale": "Explicit budget creation request — direct match to BudgetPlanner."
+  },
+  {
+    "id": "task_019",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Write a 1,000-word blog post about the benefits of asynchronous work for distributed teams.",
+    "relevantSkills": [
+      "ContentWriter"
+    ],
+    "rationale": "Clear request for long-form blog content — direct match to ContentWriter."
+  },
+  {
+    "id": "task_020",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Turn these meeting notes into structured action items with owners and deadlines.",
+    "relevantSkills": [
+      "MeetingNotesTranscriber"
+    ],
+    "rationale": "Explicit request to process meeting notes into action items — direct match to MeetingNotesTranscriber."
+  },
+  {
+    "id": "task_021",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "I need to understand what this authentication middleware does — can you walk me through it step by step?",
+    "relevantSkills": [
+      "CodeExplainer"
+    ],
+    "rationale": "User wants an explanation of existing code, not a fix (CodeDebugger) or new code (CodeGenerator). CodeExplainer is the correct single skill."
+  },
+  {
+    "id": "task_022",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "My Python script is throwing an IndexError on line 42 — what's causing it?",
+    "relevantSkills": [
+      "CodeDebugger"
+    ],
+    "rationale": "User reports a runtime error and wants the root cause found, not new code generated or code explained. CodeDebugger is the right choice."
+  },
+  {
+    "id": "task_023",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Find the best time for a 45-minute call between team members in London, New York, and Singapore.",
+    "relevantSkills": [
+      "MeetingOptimizer"
+    ],
+    "rationale": "Finding optimal cross-timezone availability requires MeetingOptimizer, not CalendarEventScheduler (which creates events, not finds slots)."
+  },
+  {
+    "id": "task_024",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Add a summary column to this spreadsheet that concatenates first and last name fields.",
+    "relevantSkills": [
+      "SpreadsheetEditor"
+    ],
+    "rationale": "Modifying/adding a column to an existing spreadsheet is SpreadsheetEditor, not SpreadsheetAnalyzer (which reads/analyzes) or DataVisualizer."
+  },
+  {
+    "id": "task_025",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Which region had the highest revenue growth in our Q2 sales spreadsheet?",
+    "relevantSkills": [
+      "SpreadsheetAnalyzer"
+    ],
+    "rationale": "This is an analytical question about data in a spreadsheet — SpreadsheetAnalyzer, not SpreadsheetEditor (edit) or DataVisualizer (charts)."
+  },
+  {
+    "id": "task_026",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "I have a meeting with a panel at Stripe next week for a senior data engineer role — what should I expect?",
+    "relevantSkills": [
+      "InterviewPreparation"
+    ],
+    "rationale": "User wants interview preparation, not resume review or job description analysis. InterviewPreparation is the match."
+  },
+  {
+    "id": "task_027",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Look at this job posting and tell me the must-have skills and any potential red flags.",
+    "relevantSkills": [
+      "JobDescriptionAnalyzer"
+    ],
+    "rationale": "Analyzing a job description for required skills and red flags is JobDescriptionAnalyzer, not InterviewPreparation or ResumeReviewer."
+  },
+  {
+    "id": "task_028",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Generate a PDF version of this proposal document with our company branding and page numbers.",
+    "relevantSkills": [
+      "PDFGenerator"
+    ],
+    "rationale": "Creating a new PDF from existing content is PDFGenerator, not PDFReader (reads existing PDFs) or PDFFormFiller (fills form fields)."
+  },
+  {
+    "id": "task_029",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "What are the key findings and methodology of this attached research paper?",
+    "relevantSkills": [
+      "AcademicPaperAnalyzer"
+    ],
+    "rationale": "Analyzing an academic paper's methodology and findings requires AcademicPaperAnalyzer, not DocumentSummarizer (general summary) or WebResearchSummarizer (web-based research)."
+  },
+  {
+    "id": "task_030",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "How does Salesforce's pricing and feature set compare to HubSpot for a 50-person sales team?",
+    "relevantSkills": [
+      "CompetitorIntelligenceGatherer"
+    ],
+    "rationale": "Competitor product and pricing comparison is CompetitorIntelligenceGatherer, not WebResearchSummarizer (general research) or FactChecker (claim verification)."
+  },
+  {
+    "id": "task_031",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Is it accurate that TypeScript adoption has surpassed JavaScript in enterprise codebases in 2024?",
+    "relevantSkills": [
+      "FactChecker"
+    ],
+    "rationale": "Verifying a specific factual claim requires FactChecker, not WebResearchSummarizer (broad topic research) or AcademicPaperAnalyzer."
+  },
+  {
+    "id": "task_032",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Rewrite this product description to sound more professional and suitable for an enterprise audience.",
+    "relevantSkills": [
+      "ToneRewriter"
+    ],
+    "rationale": "Rewriting existing text in a different tone is ToneRewriter, not ContentWriter (creates new content from scratch)."
+  },
+  {
+    "id": "task_033",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Create a Slack post announcing the new office happy hour next Friday at 5pm.",
+    "relevantSkills": [
+      "SlackMessageComposer"
+    ],
+    "rationale": "Writing an internal Slack announcement is SlackMessageComposer, not ContentWriter (marketing/editorial) or EmailDraftComposer."
+  },
+  {
+    "id": "task_034",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "What's the overall health of the main frontend repository — activity, contributors, dependencies?",
+    "relevantSkills": [
+      "GitHubRepoAnalyzer"
+    ],
+    "rationale": "High-level repository health analysis is GitHubRepoAnalyzer, not GitHubIssueReader (specific issues) or GitHubPRReviewer (specific PRs)."
+  },
+  {
+    "id": "task_035",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "I need a formal Word document template for client engagement letters with our logo and standard legal boilerplate.",
+    "relevantSkills": [
+      "WordDocumentCreator"
+    ],
+    "rationale": "Creating a new formatted Word document is WordDocumentCreator, not ReportGenerator (data-driven reports) or DocumentReader (reading existing files)."
+  },
+  {
+    "id": "task_036",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Extract all the action items and decisions from this uploaded Word file of last week's all-hands.",
+    "relevantSkills": [
+      "DocumentReader"
+    ],
+    "rationale": "Extracting content from an uploaded Word document is DocumentReader. MeetingNotesTranscriber is for transcripts/recordings, not existing Word files."
+  },
+  {
+    "id": "task_037",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "I need an agenda for tomorrow's client kickoff — we have 90 minutes and 6 attendees from both sides.",
+    "relevantSkills": [
+      "MeetingAgendaBuilder"
+    ],
+    "rationale": "Pre-meeting agenda creation is MeetingAgendaBuilder, not MeetingNotesTranscriber (post-meeting notes) or CalendarEventScheduler."
+  },
+  {
+    "id": "task_038",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Generate a 3-year revenue forecast with bear and bull scenarios based on our last 4 quarters of actuals.",
+    "relevantSkills": [
+      "FinancialForecaster"
+    ],
+    "rationale": "Forward-looking scenario modeling is FinancialForecaster, not FinancialStatementAnalyzer (historical analysis) or BudgetPlanner (budget tracking)."
+  },
+  {
+    "id": "task_039",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Compute the debt-to-equity and current ratio from this uploaded balance sheet.",
+    "relevantSkills": [
+      "FinancialStatementAnalyzer"
+    ],
+    "rationale": "Computing financial ratios from existing statements is FinancialStatementAnalyzer, not FinancialForecaster (projections) or SpreadsheetAnalyzer (general data)."
+  },
+  {
+    "id": "task_040",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Write an invoice for $12,000 in consulting services delivered to Acme Corp last month.",
+    "relevantSkills": [
+      "InvoiceGenerator"
+    ],
+    "rationale": "Creating a new invoice is InvoiceGenerator, not InvoiceProcessor (extracting data from existing invoices) or PDFGenerator (generic PDF creation)."
+  },
+  {
+    "id": "task_041",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Turn these 20 internal process documents into a searchable, tagged knowledge base.",
+    "relevantSkills": [
+      "KnowledgeBaseBuilder"
+    ],
+    "rationale": "Building/populating a knowledge base from documents is KnowledgeBaseBuilder, not KnowledgeBaseSearcher (querying existing KB) or DocumentSummarizer."
+  },
+  {
+    "id": "task_042",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Do we have any internal documentation on how to set up SSO with Okta?",
+    "relevantSkills": [
+      "KnowledgeBaseSearcher"
+    ],
+    "rationale": "Searching an existing internal knowledge base is KnowledgeBaseSearcher, not KnowledgeBaseBuilder or WebResearchSummarizer."
+  },
+  {
+    "id": "task_043",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Mark the 'Update onboarding docs' task as complete in our project tracker.",
+    "relevantSkills": [
+      "TaskManager"
+    ],
+    "rationale": "Updating a task status in a connected tool is TaskManager, not ProjectStatusTracker (reporting status) or CalendarEventScheduler."
+  },
+  {
+    "id": "task_044",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Show me which milestones in the Q4 product launch are at risk this week.",
+    "relevantSkills": [
+      "ProjectStatusTracker"
+    ],
+    "rationale": "Monitoring in-progress project milestones and risks is ProjectStatusTracker, not ProjectPlanGenerator (creating plans) or RiskAssessor (identifying risks upfront)."
+  },
+  {
+    "id": "task_045",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Write a data ingestion pipeline that pulls daily records from our Postgres database into Snowflake.",
+    "relevantSkills": [
+      "DataPipelineBuilder"
+    ],
+    "rationale": "Building an ETL/ingestion pipeline between systems is DataPipelineBuilder, not SQLQueryRunner (querying) or CodeGenerator (general code)."
+  },
+  {
+    "id": "task_046",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "How many orders were placed in the last 7 days, broken down by product category?",
+    "relevantSkills": [
+      "SQLQueryRunner"
+    ],
+    "rationale": "A structured database query answerable with SQL is SQLQueryRunner, not SpreadsheetAnalyzer (file-based data) or DataPipelineBuilder."
+  },
+  {
+    "id": "task_047",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "I got feedback that my CV is weak — give me detailed suggestions on how to strengthen it.",
+    "relevantSkills": [
+      "ResumeReviewer"
+    ],
+    "rationale": "Reviewing and giving feedback on a resume is ResumeReviewer, not InterviewPreparation or JobDescriptionAnalyzer."
+  },
+  {
+    "id": "task_048",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Summarize what changes PR #77 introduces to the payments module without reviewing for bugs.",
+    "relevantSkills": [
+      "GitHubPRReviewer"
+    ],
+    "rationale": "Summarizing PR changes (even without bug review) is GitHubPRReviewer. GitHubIssueReader is for issues, not PRs."
+  },
+  {
+    "id": "task_049",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Research recent peer-reviewed literature on transformer-based models for protein folding.",
+    "relevantSkills": [
+      "AcademicPaperAnalyzer",
+      "WebResearchSummarizer"
+    ],
+    "rationale": "Literature review of academic research is AcademicPaperAnalyzer, not WebResearchSummarizer (general web content) or FactChecker."
+  },
+  {
+    "id": "task_050",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Send the approved proposal draft to the client at contracts@acmecorp.com right now.",
+    "relevantSkills": [
+      "EmailSender"
+    ],
+    "rationale": "Sending an email (with an existing draft) is EmailSender, not EmailDraftComposer (drafting only)."
+  },
+  {
+    "id": "task_051",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Build a structured executive summary report from our Q3 competitive analysis research.",
+    "relevantSkills": [
+      "ReportGenerator"
+    ],
+    "rationale": "Producing a formal structured report from analysis inputs is ReportGenerator, not DocumentSummarizer (condensing existing doc) or ContentWriter (marketing copy)."
+  },
+  {
+    "id": "task_052",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Add a task in Asana to follow up with the design team about the wireframes, due this Thursday.",
+    "relevantSkills": [
+      "TaskManager"
+    ],
+    "rationale": "Creating a task with a due date in a connected PM tool is TaskManager, not CalendarEventScheduler or ProjectPlanGenerator."
+  },
+  {
+    "id": "task_053",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "What are the latest news and strategic moves from our main competitor, Notion?",
+    "relevantSkills": [
+      "CompetitorIntelligenceGatherer"
+    ],
+    "rationale": "Gathering competitor intelligence on strategy and news is CompetitorIntelligenceGatherer, not WebResearchSummarizer (general topics) or FactChecker."
+  },
+  {
+    "id": "task_054",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Write a formal performance review Word document template with sections for goals, achievements, and development areas.",
+    "relevantSkills": [
+      "WordDocumentCreator"
+    ],
+    "rationale": "Creating a structured Word template is WordDocumentCreator, not ReportGenerator (data-driven reports) or SOPGenerator (procedural docs)."
+  },
+  {
+    "id": "task_055",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "What are the most active files and contributors in our core API repo over the last 90 days?",
+    "relevantSkills": [
+      "GitHubRepoAnalyzer"
+    ],
+    "rationale": "Repository-level activity analysis is GitHubRepoAnalyzer, not GitHubIssueReader or GitHubPRReviewer."
+  },
+  {
+    "id": "task_056",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "I'm overspending on subscriptions — help me reallocate my personal monthly budget.",
+    "relevantSkills": [
+      "BudgetPlanner"
+    ],
+    "rationale": "Personal expense tracking and budget reallocation is BudgetPlanner, not FinancialStatementAnalyzer (corporate statements) or FinancialForecaster (projections)."
+  },
+  {
+    "id": "task_057",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Turn this Zoom transcript into organized meeting notes with decisions and next steps.",
+    "relevantSkills": [
+      "MeetingNotesTranscriber"
+    ],
+    "rationale": "Processing a meeting transcript into structured notes is MeetingNotesTranscriber, not DocumentSummarizer or MeetingAgendaBuilder."
+  },
+  {
+    "id": "task_058",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Convert this feature requirements doc into user stories for our next sprint.",
+    "relevantSkills": [
+      "UserStoryWriter"
+    ],
+    "rationale": "Converting requirements to user stories is UserStoryWriter, not TaskManager (task creation) or ProjectPlanGenerator (full project planning)."
+  },
+  {
+    "id": "task_059",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "Look up all open critical bugs assigned to the backend team in our GitHub repo.",
+    "relevantSkills": [
+      "GitHubIssueReader"
+    ],
+    "rationale": "Reading and filtering existing GitHub issues is GitHubIssueReader, not GitHubIssueCreator or GitHubRepoAnalyzer."
+  },
+  {
+    "id": "task_060",
+    "category": "Similar-Skill Confusion",
+    "difficulty": "Hard",
+    "query": "What are the latest developments in solid-state battery technology from credible sources?",
+    "relevantSkills": [
+      "WebResearchSummarizer"
+    ],
+    "rationale": "Multi-source web research on a current topic is WebResearchSummarizer, not FactChecker (specific claim verification) or AcademicPaperAnalyzer (requires paper input)."
+  },
+  {
+    "id": "task_061",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "Our pipeline keeps crashing with a NullPointerException in the transform step — I've pasted the stack trace above.",
+    "relevantSkills": [
+      "CodeDebugger"
+    ],
+    "rationale": "User describes an error with a stack trace needing diagnosis — this is debugging, even though no debugging keywords are used."
+  },
+  {
+    "id": "task_062",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I have a call with the head of procurement at a Fortune 500 tomorrow and I need to make a strong first impression in writing.",
+    "relevantSkills": [
+      "EmailDraftComposer"
+    ],
+    "rationale": "The implied task is drafting a professional outreach or prep email, matching EmailDraftComposer despite no direct mention of email."
+  },
+  {
+    "id": "task_063",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "My manager asked me to put together something showing how our spending compared to what we planned for last quarter.",
+    "relevantSkills": [
+      "BudgetPlanner"
+    ],
+    "rationale": "Comparing actuals to planned budget is a variance/budget tracking task handled by BudgetPlanner."
+  },
+  {
+    "id": "task_064",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I keep getting asked the same internal process questions by new hires — I want one place they can find answers.",
+    "relevantSkills": [
+      "KnowledgeBaseBuilder"
+    ],
+    "rationale": "Creating a centralized resource for recurring internal questions is a knowledge base use case (KnowledgeBaseBuilder)."
+  },
+  {
+    "id": "task_065",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "Before our board presentation, I want to make sure none of the statistics we're citing are wrong or outdated.",
+    "relevantSkills": [
+      "FactChecker"
+    ],
+    "rationale": "Pre-publication verification of specific statistics is FactChecker, described without using any fact-checking keywords."
+  },
+  {
+    "id": "task_066",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "We're about to sign a vendor. I want to see what people are saying about them publicly — news, lawsuits, anything noteworthy.",
+    "relevantSkills": [
+      "WebResearchSummarizer"
+    ],
+    "rationale": "Aggregating public information about a company from multiple sources is WebResearchSummarizer, phrased as due diligence research."
+  },
+  {
+    "id": "task_067",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "Our CFO wants a picture of where we stand financially — profitability, leverage, and how we look versus last year.",
+    "relevantSkills": [
+      "FinancialStatementAnalyzer"
+    ],
+    "rationale": "Computing profitability/leverage ratios and year-over-year trends from financial statements is FinancialStatementAnalyzer."
+  },
+  {
+    "id": "task_068",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I need to hand off this codebase to a new contractor. They've never seen it before and need to get up to speed fast.",
+    "relevantSkills": [
+      "GitHubRepoAnalyzer"
+    ],
+    "rationale": "Onboarding someone to an unfamiliar codebase by understanding its structure and tech stack is GitHubRepoAnalyzer."
+  },
+  {
+    "id": "task_069",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I want to know whether the way our team is shipping changes is creating any hidden dangers we might be missing.",
+    "relevantSkills": [
+      "RiskAssessor"
+    ],
+    "rationale": "Identifying hidden project/operational risks in a software delivery workflow maps to RiskAssessor."
+  },
+  {
+    "id": "task_070",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "Help me put together a picture of what our Q3 launch will realistically look like given current progress and remaining work.",
+    "relevantSkills": [
+      "ProjectStatusTracker"
+    ],
+    "rationale": "Assessing current project progress against remaining work is ProjectStatusTracker."
+  },
+  {
+    "id": "task_071",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I want to prep my team for a difficult conversation we have coming up with an enterprise prospect and need some talking points and likely objections.",
+    "relevantSkills": [
+      "ContentWriter"
+    ],
+    "rationale": "Preparing written talking points and objection-handling content for a sales conversation is ContentWriter (marketing/persuasive copy)."
+  },
+  {
+    "id": "task_072",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "This function works but nobody on the team can figure out what it's actually doing.",
+    "relevantSkills": [
+      "CodeExplainer"
+    ],
+    "rationale": "Making opaque code understandable to a team is CodeExplainer — no explicit 'explain' keyword used."
+  },
+  {
+    "id": "task_073",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "We just finished a 2-hour planning session. I recorded it — can you turn it into something actionable?",
+    "relevantSkills": [
+      "MeetingNotesTranscriber"
+    ],
+    "rationale": "Processing a meeting recording into actionable outputs is MeetingNotesTranscriber, described without mentioning notes or transcription."
+  },
+  {
+    "id": "task_074",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I got a job posting in my inbox — I'm trying to figure out if it's worth applying or if they're asking for too much.",
+    "relevantSkills": [
+      "JobDescriptionAnalyzer"
+    ],
+    "rationale": "Evaluating a job posting's requirements and potential red flags is JobDescriptionAnalyzer, described as personal decision-making."
+  },
+  {
+    "id": "task_075",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "We need to move our nightly reporting data from our old MySQL setup into the new warehouse automatically.",
+    "relevantSkills": [
+      "DataPipelineBuilder"
+    ],
+    "rationale": "Automating data movement between systems is an ETL/pipeline task — DataPipelineBuilder — described without ETL jargon."
+  },
+  {
+    "id": "task_076",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "The way this proposal is written feels too stiff and bureaucratic. The client is a startup founder — it needs to feel more human.",
+    "relevantSkills": [
+      "ToneRewriter"
+    ],
+    "rationale": "Adjusting the register of existing text for a different audience is ToneRewriter, described as a tone mismatch problem."
+  },
+  {
+    "id": "task_077",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I want our head of sales to have something impressive ready for their flight to the conference — a document they can study about the competitor we're pitching against.",
+    "relevantSkills": [
+      "CompetitorIntelligenceGatherer"
+    ],
+    "rationale": "Preparing competitor intelligence material for a sales team is CompetitorIntelligenceGatherer, described as conference preparation."
+  },
+  {
+    "id": "task_078",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "My team keeps saying the existing tests don't cover the new edge cases. Can you look at the PR and weigh in?",
+    "relevantSkills": [
+      "GitHubPRReviewer"
+    ],
+    "rationale": "Reviewing a PR for test coverage gaps is GitHubPRReviewer, framed as a team concern without explicit review language."
+  },
+  {
+    "id": "task_079",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I want to know if the growth numbers our marketing team put in the deck are actually accurate.",
+    "relevantSkills": [
+      "FactChecker"
+    ],
+    "rationale": "Verifying accuracy of specific numerical claims before presentation is FactChecker."
+  },
+  {
+    "id": "task_080",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "Our new engineer is drowning in the codebase. Can you write up something they can read to understand how the system is structured?",
+    "relevantSkills": [
+      "GitHubRepoAnalyzer"
+    ],
+    "rationale": "Producing an architectural overview for onboarding an engineer is GitHubRepoAnalyzer."
+  },
+  {
+    "id": "task_081",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I'm interviewing candidates for a senior PM role next week and need a question bank to run consistent interviews.",
+    "relevantSkills": [
+      "InterviewPreparation"
+    ],
+    "rationale": "Generating structured interview questions for a role maps to InterviewPreparation, even when the user is the interviewer."
+  },
+  {
+    "id": "task_082",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I want a realistic picture of where our cash will be in 18 months if we hire aggressively vs. conservatively.",
+    "relevantSkills": [
+      "FinancialForecaster"
+    ],
+    "rationale": "Modeling two hiring-scenario cash flow outcomes is FinancialForecaster (scenario analysis), without using forecasting terminology."
+  },
+  {
+    "id": "task_083",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "We charge per seat and have five enterprise clients that need invoices for last month's usage. Can you handle that?",
+    "relevantSkills": [
+      "InvoiceGenerator"
+    ],
+    "rationale": "Generating invoices for multiple clients from usage data is InvoiceGenerator, described as billing administration."
+  },
+  {
+    "id": "task_084",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "Before we sign off on this vendor invoice, I need to make sure the amounts match what's in our purchase order.",
+    "relevantSkills": [
+      "InvoiceProcessor"
+    ],
+    "rationale": "Validating an invoice against a purchase order is InvoiceProcessor, framed as a procurement approval task."
+  },
+  {
+    "id": "task_085",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I need something that will help me keep track of everything we talked about in our product sessions so I don't lose institutional knowledge when people leave.",
+    "relevantSkills": [
+      "KnowledgeBaseBuilder"
+    ],
+    "rationale": "Capturing and preserving institutional knowledge from sessions is KnowledgeBaseBuilder, without using 'knowledge base' language."
+  },
+  {
+    "id": "task_086",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I have 3 hours before submitting my application — I want to know if anything about my background profile will immediately screen me out.",
+    "relevantSkills": [
+      "ResumeReviewer"
+    ],
+    "rationale": "Urgently evaluating a resume for screening risk is ResumeReviewer, described as a job application concern."
+  },
+  {
+    "id": "task_087",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I need to get insights on buying patterns before our strategy meeting.",
+    "relevantSkills": [
+      "SpreadsheetAnalyzer"
+    ],
+    "rationale": "Analyzing patterns in existing spreadsheet data is SpreadsheetAnalyzer, described as pre-meeting prep."
+  },
+  {
+    "id": "task_088",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "I want something visually compelling I can drop into the board deck to show customer retention trends over 4 quarters.",
+    "relevantSkills": [
+      "DataVisualizer"
+    ],
+    "rationale": "Creating a visual chart for a presentation from retention data is DataVisualizer, described as a presentation need."
+  },
+  {
+    "id": "task_089",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "Block off 3 hours every Wednesday morning for focused writing time — I don't want meetings during that window.",
+    "relevantSkills": [
+      "CalendarEventScheduler"
+    ],
+    "rationale": "Blocking recurring time on a calendar is CalendarEventScheduler, described without scheduling jargon."
+  },
+  {
+    "id": "task_090",
+    "category": "Hidden-Intent",
+    "difficulty": "Hard",
+    "query": "The analyst team wrote a 55-page market entry report. I need the highlights in under 5 minutes of reading time.",
+    "relevantSkills": [
+      "DocumentSummarizer"
+    ],
+    "rationale": "Condensing a lengthy report to key highlights is DocumentSummarizer, framed as a time-constraint problem."
+  },
+  {
+    "id": "task_091",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Research what competitors are doing in the AI writing tools space, then create a structured competitive analysis report in Word format.",
+    "relevantSkills": [
+      "CompetitorIntelligenceGatherer",
+      "WordDocumentCreator"
+    ],
+    "rationale": "Requires gathering competitor intelligence first, then formatting the findings into a Word document."
+  },
+  {
+    "id": "task_092",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Take this Zoom transcript from today's sprint retrospective, extract action items, and add them as tasks in Asana with due dates.",
+    "relevantSkills": [
+      "MeetingNotesTranscriber",
+      "TaskManager"
+    ],
+    "rationale": "Must first process the transcript to extract action items (MeetingNotesTranscriber), then create those tasks in a connected tool (TaskManager)."
+  },
+  {
+    "id": "task_093",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Analyze the financials from this uploaded income statement PDF, then build a 2-year forecast based on current trends.",
+    "relevantSkills": [
+      "PDFReader",
+      "FinancialStatementAnalyzer",
+      "FinancialForecaster"
+    ],
+    "rationale": "PDFReader extracts the data from the PDF, FinancialStatementAnalyzer interprets the financials, and FinancialForecaster builds the projection."
+  },
+  {
+    "id": "task_094",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Find a meeting slot that works for all 4 team members across different time zones, then book it on everyone's calendar.",
+    "relevantSkills": [
+      "MeetingOptimizer",
+      "CalendarEventScheduler"
+    ],
+    "rationale": "MeetingOptimizer identifies the optimal slot; CalendarEventScheduler creates the actual calendar event."
+  },
+  {
+    "id": "task_095",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Review PR #55 for any bugs, then open GitHub issues for each problem you find.",
+    "relevantSkills": [
+      "GitHubPRReviewer",
+      "GitHubIssueCreator"
+    ],
+    "rationale": "GitHubPRReviewer identifies bugs in the PR; GitHubIssueCreator files each bug as a separate issue."
+  },
+  {
+    "id": "task_096",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Write a LinkedIn article about our new product launch, then translate it into Spanish and French.",
+    "relevantSkills": [
+      "ContentWriter",
+      "LanguageTranslator"
+    ],
+    "rationale": "ContentWriter creates the original article; LanguageTranslator converts it into Spanish and French."
+  },
+  {
+    "id": "task_097",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Pull our Q3 sales data from the database, visualize it as a regional breakdown chart, and generate a summary report for the executive team.",
+    "relevantSkills": [
+      "SQLQueryRunner",
+      "DataVisualizer",
+      "ReportGenerator"
+    ],
+    "rationale": "SQLQueryRunner retrieves the data; DataVisualizer creates the chart; ReportGenerator produces the executive report."
+  },
+  {
+    "id": "task_098",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Upload and read this vendor contract PDF, then draft a summary email to our legal team highlighting the key terms and obligations.",
+    "relevantSkills": [
+      "PDFReader",
+      "EmailDraftComposer"
+    ],
+    "rationale": "PDFReader extracts and reads the contract; EmailDraftComposer writes the summary email to legal."
+  },
+  {
+    "id": "task_099",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Debug this broken data transformation script and then run it on our test dataset to verify the fix works.",
+    "relevantSkills": [
+      "CodeDebugger",
+      "CodeExecutor"
+    ],
+    "rationale": "CodeDebugger identifies and fixes the bug; CodeExecutor runs the corrected script to verify the output."
+  },
+  {
+    "id": "task_100",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Create an agenda for tomorrow's project kickoff, then build a full project plan document covering the next 6 months.",
+    "relevantSkills": [
+      "MeetingAgendaBuilder",
+      "ProjectPlanGenerator"
+    ],
+    "rationale": "MeetingAgendaBuilder creates the meeting agenda; ProjectPlanGenerator produces the full 6-month project plan."
+  },
+  {
+    "id": "task_101",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Analyze the data in this sales CSV, then edit the spreadsheet to add a 'Performance Tier' column based on the revenue quartile each rep falls into.",
+    "relevantSkills": [
+      "SpreadsheetAnalyzer",
+      "SpreadsheetEditor"
+    ],
+    "rationale": "SpreadsheetAnalyzer computes the quartile thresholds; SpreadsheetEditor adds and populates the new column."
+  },
+  {
+    "id": "task_102",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Take the user story we just wrote for the checkout flow and create corresponding GitHub issues for each acceptance criterion.",
+    "relevantSkills": [
+      "UserStoryWriter",
+      "GitHubIssueCreator"
+    ],
+    "rationale": "UserStoryWriter defines the stories and acceptance criteria; GitHubIssueCreator files each criterion as a trackable issue."
+  },
+  {
+    "id": "task_103",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Read the uploaded 40-page research paper on LLM fine-tuning techniques and produce a structured summary report I can share with our engineering team.",
+    "relevantSkills": [
+      "AcademicPaperAnalyzer",
+      "ReportGenerator"
+    ],
+    "rationale": "AcademicPaperAnalyzer extracts methodology and findings; ReportGenerator formats the output as a shareable structured report."
+  },
+  {
+    "id": "task_104",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Identify the biggest risks in our product launch plan and generate corresponding user stories to address them in the next sprint.",
+    "relevantSkills": [
+      "RiskAssessor",
+      "UserStoryWriter"
+    ],
+    "rationale": "RiskAssessor identifies and prioritizes the risks; UserStoryWriter converts mitigation steps into actionable sprint stories."
+  },
+  {
+    "id": "task_105",
+    "category": "Easy",
+    "difficulty": "Easy",
+    "query": "Draft a Slack announcement about the upcoming system maintenance window, then post it to the #engineering channel.",
+    "relevantSkills": [
+      "SlackMessageComposer"
+    ],
+    "rationale": "SlackMessageComposer both drafts and sends Slack messages when connected. A single skill handles compose and send."
+  },
+  {
+    "id": "task_106",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Extract all invoice data from the 30 PDF invoices in this folder, then build a spreadsheet summarizing vendor totals by month.",
+    "relevantSkills": [
+      "InvoiceProcessor",
+      "SpreadsheetEditor"
+    ],
+    "rationale": "InvoiceProcessor extracts structured data from the PDFs; SpreadsheetEditor builds the summary spreadsheet from the extracted data."
+  },
+  {
+    "id": "task_107",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Review this applicant's resume against the job description we posted, then draft an interview invitation email if they're a strong fit.",
+    "relevantSkills": [
+      "JobDescriptionAnalyzer",
+      "ResumeReviewer",
+      "EmailDraftComposer"
+    ],
+    "rationale": "JobDescriptionAnalyzer parses the JD requirements; ResumeReviewer evaluates the candidate's CV; EmailDraftComposer writes the invitation."
+  },
+  {
+    "id": "task_108",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Research the latest AI regulation developments globally, then write a blog post summarizing the implications for enterprise SaaS companies.",
+    "relevantSkills": [
+      "WebResearchSummarizer",
+      "ContentWriter"
+    ],
+    "rationale": "WebResearchSummarizer aggregates current regulatory news; ContentWriter produces the blog post from that research."
+  },
+  {
+    "id": "task_109",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Build an ETL pipeline to pull customer data from our CRM into our warehouse, then write a SQL query to count active users by plan tier.",
+    "relevantSkills": [
+      "DataPipelineBuilder",
+      "SQLQueryRunner"
+    ],
+    "rationale": "DataPipelineBuilder creates the ingestion pipeline; SQLQueryRunner handles the analytical query on the loaded data."
+  },
+  {
+    "id": "task_110",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Generate a branded PDF invoice for our client from this billing summary, then email it to them with a payment reminder note.",
+    "relevantSkills": [
+      "InvoiceGenerator",
+      "EmailSender"
+    ],
+    "rationale": "InvoiceGenerator creates the PDF invoice; EmailSender delivers it with the accompanying note."
+  },
+  {
+    "id": "task_111",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "I need to onboard a new team member: build a knowledge base from our internal docs, then search it to answer their first three questions about our deployment process.",
+    "relevantSkills": [
+      "KnowledgeBaseBuilder",
+      "KnowledgeBaseSearcher"
+    ],
+    "rationale": "KnowledgeBaseBuilder organizes the internal docs into a KB; KnowledgeBaseSearcher retrieves answers to the specific questions."
+  },
+  {
+    "id": "task_112",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Write a Python script to clean our customer data CSV, run it on the file, and then create a visualization showing the distribution of customer segments.",
+    "relevantSkills": [
+      "CodeGenerator",
+      "CodeExecutor",
+      "DataVisualizer"
+    ],
+    "rationale": "CodeGenerator writes the cleaning script; CodeExecutor runs it; DataVisualizer creates the segment distribution chart."
+  },
+  {
+    "id": "task_113",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Review the open critical issues in our repo, then write a status update Slack message for the engineering team.",
+    "relevantSkills": [
+      "GitHubIssueReader",
+      "SlackMessageComposer"
+    ],
+    "rationale": "GitHubIssueReader fetches the current critical issue list; SlackMessageComposer drafts the status update based on those issues."
+  },
+  {
+    "id": "task_114",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Summarize this 80-page strategy document, then translate the summary into Mandarin for our APAC leadership team.",
+    "relevantSkills": [
+      "DocumentSummarizer",
+      "LanguageTranslator"
+    ],
+    "rationale": "DocumentSummarizer condenses the document; LanguageTranslator converts the summary to Mandarin."
+  },
+  {
+    "id": "task_115",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Identify project risks for our upcoming ERP migration, then add each risk as a task in Jira with the mitigation steps in the description.",
+    "relevantSkills": [
+      "RiskAssessor",
+      "TaskManager"
+    ],
+    "rationale": "RiskAssessor identifies and details the risks; TaskManager creates Jira tickets with mitigation descriptions."
+  },
+  {
+    "id": "task_116",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Fact-check the key statistics in this draft blog post, then rewrite any sections where claims are inaccurate or misleading.",
+    "relevantSkills": [
+      "FactChecker",
+      "ContentWriter"
+    ],
+    "rationale": "FactChecker verifies the statistics; ContentWriter rewrites the inaccurate sections with corrected content."
+  },
+  {
+    "id": "task_117",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Analyze our repository's health and dependency vulnerabilities, then create a formal risk assessment document for the security review board.",
+    "relevantSkills": [
+      "GitHubRepoAnalyzer",
+      "RiskAssessor"
+    ],
+    "rationale": "GitHubRepoAnalyzer surfaces dependency issues and repo health; RiskAssessor formats findings into a structured risk register."
+  },
+  {
+    "id": "task_118",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Extract action items from the board meeting transcript, schedule follow-up meetings for each action owner, and send them calendar invites.",
+    "relevantSkills": [
+      "MeetingNotesTranscriber",
+      "CalendarEventScheduler"
+    ],
+    "rationale": "MeetingNotesTranscriber extracts action items with owners; CalendarEventScheduler books follow-up meetings for each."
+  },
+  {
+    "id": "task_119",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Build a project plan for our CRM migration, then write SOPs for each major phase so the ops team can execute without hand-holding.",
+    "relevantSkills": [
+      "ProjectPlanGenerator",
+      "SOPGenerator"
+    ],
+    "rationale": "ProjectPlanGenerator creates the phased plan; SOPGenerator documents step-by-step procedures for each phase."
+  },
+  {
+    "id": "task_120",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Read this applicant's uploaded resume, coach them on 5 likely interview questions for the role they applied to, and draft a prep email to send them.",
+    "relevantSkills": [
+      "ResumeReviewer",
+      "InterviewPreparation",
+      "EmailDraftComposer"
+    ],
+    "rationale": "ResumeReviewer reads the resume context; InterviewPreparation generates relevant questions; EmailDraftComposer writes the coaching email."
+  },
+  {
+    "id": "task_121",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Use our database to find the top 20 churned enterprise accounts, then generate a personalized win-back email template for each segment.",
+    "relevantSkills": [
+      "SQLQueryRunner",
+      "EmailDraftComposer"
+    ],
+    "rationale": "SQLQueryRunner identifies the churned accounts with segmentation; EmailDraftComposer creates targeted win-back email templates."
+  },
+  {
+    "id": "task_122",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Explain what this legacy payment processing module does, then rewrite it using modern Python best practices.",
+    "relevantSkills": [
+      "CodeExplainer",
+      "CodeGenerator"
+    ],
+    "rationale": "CodeExplainer documents the existing logic; CodeGenerator rewrites it following best practices."
+  },
+  {
+    "id": "task_123",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Create a competitive landscape report on the HR tech space and save it as a formatted Word document.",
+    "relevantSkills": [
+      "CompetitorIntelligenceGatherer",
+      "WordDocumentCreator"
+    ],
+    "rationale": "CompetitorIntelligenceGatherer researches the competitive landscape; WordDocumentCreator formats the output as a .docx file."
+  },
+  {
+    "id": "task_124",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Check all the financial figures in our investor update deck against our actual financial statements and flag anything that doesn't match.",
+    "relevantSkills": [
+      "FinancialStatementAnalyzer",
+      "FactChecker"
+    ],
+    "rationale": "FinancialStatementAnalyzer parses the actual statements; FactChecker cross-checks the deck figures against the sourced data."
+  },
+  {
+    "id": "task_125",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Document our customer support escalation process as an SOP, then turn it into a searchable entry in our internal knowledge base.",
+    "relevantSkills": [
+      "SOPGenerator",
+      "KnowledgeBaseBuilder"
+    ],
+    "rationale": "SOPGenerator creates the formal procedure document; KnowledgeBaseBuilder ingests and indexes it into the KB."
+  },
+  {
+    "id": "task_126",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Rewrite this technical whitepaper to be accessible to a non-technical executive audience, then generate a PDF for distribution.",
+    "relevantSkills": [
+      "ToneRewriter",
+      "PDFGenerator"
+    ],
+    "rationale": "ToneRewriter adapts the whitepaper to a non-technical register; PDFGenerator produces the formatted PDF version."
+  },
+  {
+    "id": "task_127",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Search our knowledge base for existing GDPR compliance guidance, then check whether that guidance is still accurate given recent regulatory updates.",
+    "relevantSkills": [
+      "KnowledgeBaseSearcher",
+      "FactChecker"
+    ],
+    "rationale": "KnowledgeBaseSearcher retrieves the internal GDPR docs; FactChecker verifies their accuracy against current regulations."
+  },
+  {
+    "id": "task_128",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Analyze the academic literature on RAG architectures for enterprise search, then build a report I can present to our CTO.",
+    "relevantSkills": [
+      "AcademicPaperAnalyzer",
+      "ReportGenerator"
+    ],
+    "rationale": "AcademicPaperAnalyzer processes the research papers; ReportGenerator formats the synthesis into a CTO-ready document."
+  },
+  {
+    "id": "task_129",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Build a project status tracker for our ongoing initiatives, then send a weekly digest email to all stakeholders every Monday morning.",
+    "relevantSkills": [
+      "ProjectStatusTracker",
+      "EmailSender"
+    ],
+    "rationale": "ProjectStatusTracker compiles the progress summary; EmailSender delivers the digest to stakeholders on schedule."
+  },
+  {
+    "id": "task_130",
+    "category": "Multi-Skill",
+    "difficulty": "Hard",
+    "query": "Generate a Python script that normalizes our product catalog data, debug any issues that come up, and execute it on the staging dataset.",
+    "relevantSkills": [
+      "CodeGenerator",
+      "CodeDebugger",
+      "CodeExecutor"
+    ],
+    "rationale": "CodeGenerator writes the normalization script; CodeDebugger fixes any errors; CodeExecutor runs it on the staging data."
+  },
+  {
+    "id": "task_131",
+    "category": "No-Skill",
+    "difficulty": "Easy",
+    "query": "What is the capital of Argentina?",
+    "relevantSkills": [],
+    "rationale": "Simple factual geography question — no skill in the catalog handles general knowledge Q&A."
+  },
+  {
+    "id": "task_132",
+    "category": "No-Skill",
+    "difficulty": "Easy",
+    "query": "Can you recommend some good thriller novels I might enjoy?",
+    "relevantSkills": [],
+    "rationale": "Book recommendation is a general conversational request — no skill covers entertainment recommendations."
+  },
+  {
+    "id": "task_133",
+    "category": "No-Skill",
+    "difficulty": "Easy",
+    "query": "What's the difference between TCP and UDP protocols?",
+    "relevantSkills": [],
+    "rationale": "A factual networking concept question — CodeExplainer is for code, not general CS theory. No skill applies."
+  },
+  {
+    "id": "task_134",
+    "category": "No-Skill",
+    "difficulty": "Easy",
+    "query": "How do I get better at public speaking?",
+    "relevantSkills": [],
+    "rationale": "Coaching on personal communication skills falls outside all available skill categories."
+  },
+  {
+    "id": "task_135",
+    "category": "No-Skill",
+    "difficulty": "Easy",
+    "query": "Write me a haiku about autumn leaves.",
+    "relevantSkills": [],
+    "rationale": "Creative poetry writing is not covered by ContentWriter (which is for marketing/editorial content) or any other skill."
+  },
+  {
+    "id": "task_136",
+    "category": "No-Skill",
+    "difficulty": "Easy",
+    "query": "What year was the Eiffel Tower built?",
+    "relevantSkills": [],
+    "rationale": "General historical trivia — no skill in the catalog handles encyclopedic knowledge queries."
+  },
+  {
+    "id": "task_137",
+    "category": "No-Skill",
+    "difficulty": "Easy",
+    "query": "Explain the concept of opportunity cost in economics.",
+    "relevantSkills": [],
+    "rationale": "Explaining an economic concept is a general knowledge task — FinancialStatementAnalyzer and BudgetPlanner are for financial data, not education."
+  },
+  {
+    "id": "task_138",
+    "category": "No-Skill",
+    "difficulty": "Easy",
+    "query": "I'm feeling really burned out lately — any tips for dealing with workplace stress?",
+    "relevantSkills": [],
+    "rationale": "Mental wellness and stress management advice is not covered by any skill in the catalog."
+  },
+  {
+    "id": "task_139",
+    "category": "No-Skill",
+    "difficulty": "Easy",
+    "query": "What's a good recipe for chicken tikka masala?",
+    "relevantSkills": [],
+    "rationale": "Recipe recommendation and cooking guidance are not in any available skill's scope."
+  },
+  {
+    "id": "task_140",
+    "category": "No-Skill",
+    "difficulty": "Easy",
+    "query": "Can you help me come up with a name for my new startup?",
+    "relevantSkills": [],
+    "rationale": "Brand naming and ideation are not covered by ContentWriter (which produces content, not brand names) or any other skill."
+  },
+  {
+    "id": "task_141",
+    "category": "No-Skill",
+    "difficulty": "Medium",
+    "query": "What are the pros and cons of remote work vs. in-office for knowledge workers?",
+    "relevantSkills": [],
+    "rationale": "Comparative analysis of work models is a general advisory question — WebResearchSummarizer is for current events research, not opinion synthesis."
+  },
+  {
+    "id": "task_142",
+    "category": "No-Skill",
+    "difficulty": "Medium",
+    "query": "Help me brainstorm 10 creative names for our new analytics product feature.",
+    "relevantSkills": [],
+    "rationale": "Creative naming/brainstorming is not a task covered by ContentWriter (which writes editorial content) or any other skill."
+  },
+  {
+    "id": "task_143",
+    "category": "No-Skill",
+    "difficulty": "Medium",
+    "query": "Explain the difference between supervised and unsupervised machine learning.",
+    "relevantSkills": [],
+    "rationale": "Explaining ML concepts is general education — no skill covers technical concept explanations outside of code."
+  },
+  {
+    "id": "task_144",
+    "category": "No-Skill",
+    "difficulty": "Medium",
+    "query": "What's the best way to negotiate a salary increase with my current employer?",
+    "relevantSkills": [],
+    "rationale": "Salary negotiation coaching is not covered by InterviewPreparation (interview Q&A) or ResumeReviewer — it's general career advice."
+  },
+  {
+    "id": "task_145",
+    "category": "No-Skill",
+    "difficulty": "Medium",
+    "query": "Solve this math problem: what is the integral of x² + 3x from 0 to 5?",
+    "relevantSkills": [],
+    "rationale": "Solving a math problem is a general reasoning task — CodeExecutor runs code, not mathematical derivations. No skill applies."
+  },
+  {
+    "id": "task_146",
+    "category": "No-Skill",
+    "difficulty": "Hard",
+    "query": "What ethical considerations should I think about when deploying AI models in hiring decisions?",
+    "relevantSkills": [],
+    "rationale": "AI ethics and policy guidance is not covered by any available skill — it's a philosophical/regulatory advisory question."
+  },
+  {
+    "id": "task_147",
+    "category": "No-Skill",
+    "difficulty": "Hard",
+    "query": "I need to decide between PostgreSQL and MongoDB for our new microservice — what should I consider?",
+    "relevantSkills": [],
+    "rationale": "Technology selection advisory is outside all available skills — CodeGenerator and SQLQueryRunner operate within chosen technologies, not evaluate them."
+  },
+  {
+    "id": "task_148",
+    "category": "No-Skill",
+    "difficulty": "Hard",
+    "query": "My co-founder and I are having a disagreement about product direction — how should we approach this constructively?",
+    "relevantSkills": [],
+    "rationale": "Interpersonal conflict resolution and leadership coaching are not in any skill's scope."
+  },
+  {
+    "id": "task_149",
+    "category": "No-Skill",
+    "difficulty": "Hard",
+    "query": "We're deciding whether to raise a Series A now or wait 6 months — what factors should we weigh?",
+    "relevantSkills": [],
+    "rationale": "Fundraising strategy advice is not covered by FinancialForecaster (modeling) or BudgetPlanner — it's a high-level investment advisory question."
+  },
+  {
+    "id": "task_150",
+    "category": "No-Skill",
+    "difficulty": "Hard",
+    "query": "I want to understand how attention mechanisms in transformer architectures actually work under the hood — can you walk me through it intuitively?",
+    "relevantSkills": [],
+    "rationale": "Explaining AI/ML concepts intuitively is general education — CodeExplainer handles code, not ML theory. No skill applies."
+  }
+]

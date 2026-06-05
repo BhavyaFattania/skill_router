@@ -1,0 +1,182 @@
+{
+  "metrics": {
+    "recallAtK": 0.9555555555555556,
+    "precisionAtK": 0.948888888888889,
+    "mrr": 0.9733333333333334
+  },
+  "categoryMetrics": {
+    "Easy": {
+      "recallAtK": 1,
+      "precisionAtK": 0.9523809523809523,
+      "mrr": 1
+    },
+    "Similar-Skill Confusion": {
+      "recallAtK": 0.9875,
+      "precisionAtK": 1,
+      "mrr": 1
+    },
+    "Hidden-Intent": {
+      "recallAtK": 0.9333333333333333,
+      "precisionAtK": 0.8833333333333333,
+      "mrr": 0.9
+    },
+    "Multi-Skill": {
+      "recallAtK": 0.893162393162393,
+      "precisionAtK": 0.9188034188034189,
+      "mrr": 0.9743589743589743
+    },
+    "No-Skill": {
+      "recallAtK": 1,
+      "precisionAtK": 1,
+      "mrr": 1
+    }
+  },
+  "failureCases": [
+    {
+      "taskId": "task_011",
+      "task": "Summarize this 60-page annual report into a short executive summary.",
+      "category": "Easy",
+      "expectedSkills": [
+        "DocumentSummarizer"
+      ],
+      "retrievedSkills": [
+        "DocumentSummarizer",
+        "PDFReader"
+      ],
+      "missingSkills": [],
+      "reason": "False positive skills were retrieved or selected."
+    },
+    {
+      "taskId": "task_020",
+      "task": "Turn these meeting notes into structured action items with owners and deadlines.",
+      "category": "Easy",
+      "expectedSkills": [
+        "MeetingNotesTranscriber"
+      ],
+      "retrievedSkills": [
+        "MeetingNotesTranscriber",
+        "TaskManager"
+      ],
+      "missingSkills": [],
+      "reason": "False positive skills were retrieved or selected."
+    },
+    {
+      "taskId": "task_049",
+      "task": "Research recent peer-reviewed literature on transformer-based models for protein folding.",
+      "category": "Similar-Skill Confusion",
+      "expectedSkills": [
+        "AcademicPaperAnalyzer",
+        "WebResearchSummarizer"
+      ],
+      "retrievedSkills": [
+        "WebResearchSummarizer"
+      ],
+      "missingSkills": [
+        "AcademicPaperAnalyzer"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_068",
+      "task": "I need to hand off this codebase to a new contractor. They've never seen it before and need to get up to speed fast.",
+      "category": "Hidden-Intent",
+      "expectedSkills": [
+        "GitHubRepoAnalyzer"
+      ],
+      "retrievedSkills": [
+        "CodeExplainer",
+        "GitHubRepoAnalyzer"
+      ],
+      "missingSkills": [],
+      "reason": "False positive skills were retrieved or selected."
+    },
+    {
+      "taskId": "task_069",
+      "task": "I want to know whether the way our team is shipping changes is creating any hidden dangers we might be missing.",
+      "category": "Hidden-Intent",
+      "expectedSkills": [
+        "RiskAssessor"
+      ],
+      "retrievedSkills": [
+        "GitHubRepoAnalyzer",
+        "RiskAssessor"
+      ],
+      "missingSkills": [],
+      "reason": "False positive skills were retrieved or selected."
+    },
+    {
+      "taskId": "task_071",
+      "task": "I want to prep my team for a difficult conversation we have coming up with an enterprise prospect and need some talking points and likely objections.",
+      "category": "Hidden-Intent",
+      "expectedSkills": [
+        "ContentWriter"
+      ],
+      "retrievedSkills": [],
+      "missingSkills": [
+        "ContentWriter"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_077",
+      "task": "I want our head of sales to have something impressive ready for their flight to the conference — a document they can study about the competitor we're pitching against.",
+      "category": "Hidden-Intent",
+      "expectedSkills": [
+        "CompetitorIntelligenceGatherer"
+      ],
+      "retrievedSkills": [
+        "CompetitorIntelligenceGatherer",
+        "ReportGenerator"
+      ],
+      "missingSkills": [],
+      "reason": "False positive skills were retrieved or selected."
+    },
+    {
+      "taskId": "task_079",
+      "task": "I want to know if the growth numbers our marketing team put in the deck are actually accurate.",
+      "category": "Hidden-Intent",
+      "expectedSkills": [
+        "FactChecker"
+      ],
+      "retrievedSkills": [],
+      "missingSkills": [
+        "FactChecker"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_102",
+      "task": "Take the user story we just wrote for the checkout flow and create corresponding GitHub issues for each acceptance criterion.",
+      "category": "Multi-Skill",
+      "expectedSkills": [
+        "UserStoryWriter",
+        "GitHubIssueCreator"
+      ],
+      "retrievedSkills": [
+        "GitHubIssueCreator"
+      ],
+      "missingSkills": [
+        "UserStoryWriter"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_103",
+      "task": "Read the uploaded 40-page research paper on LLM fine-tuning techniques and produce a structured summary report I can share with our engineering team.",
+      "category": "Multi-Skill",
+      "expectedSkills": [
+        "AcademicPaperAnalyzer",
+        "ReportGenerator"
+      ],
+      "retrievedSkills": [
+        "AcademicPaperAnalyzer",
+        "PDFReader"
+      ],
+      "missingSkills": [
+        "ReportGenerator"
+      ],
+      "reason": "Expected skill was not retrieved or selected. AND False positive skills were retrieved or selected."
+    }
+  ],
+  "generatedAt": "2026-06-04T20:40:18.526Z"
+}

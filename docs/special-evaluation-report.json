@@ -1,0 +1,236 @@
+{
+  "metrics": {
+    "recallAtK": 0.8388888888888888,
+    "precisionAtK": 0.9583333333333334,
+    "mrr": 0.9833333333333333
+  },
+  "categoryMetrics": {
+    "Research": {
+      "recallAtK": 1,
+      "precisionAtK": 1,
+      "mrr": 1
+    },
+    "Data Analysis": {
+      "recallAtK": 0.6666666666666666,
+      "precisionAtK": 1,
+      "mrr": 1
+    },
+    "Productivity": {
+      "recallAtK": 1,
+      "precisionAtK": 1,
+      "mrr": 1
+    },
+    "Miscellaneous": {
+      "recallAtK": 0.9444444444444443,
+      "precisionAtK": 1,
+      "mrr": 1
+    },
+    "Finance": {
+      "recallAtK": 0.8333333333333334,
+      "precisionAtK": 0.8333333333333334,
+      "mrr": 1
+    },
+    "Project Management": {
+      "recallAtK": 0.6666666666666666,
+      "precisionAtK": 0.8333333333333334,
+      "mrr": 1
+    },
+    "Software Engineering": {
+      "recallAtK": 0.9,
+      "precisionAtK": 0.95,
+      "mrr": 0.9
+    },
+    "Knowledge Management": {
+      "recallAtK": 0.75,
+      "precisionAtK": 1,
+      "mrr": 1
+    },
+    "Communication": {
+      "recallAtK": 0.3333333333333333,
+      "precisionAtK": 1,
+      "mrr": 1
+    },
+    "Documents": {
+      "recallAtK": 0.7777777777777777,
+      "precisionAtK": 1,
+      "mrr": 1
+    }
+  },
+  "failureCases": [
+    {
+      "taskId": "task_152",
+      "task": "Marketing dropped last quarter's campaign performance CSV in my inbox. It's a mess — duplicates everywhere, inconsistent region labels, and several blanks in the revenue column. Once it's clean, I need a chart the CMO can actually read in her QBR prep showing which channels drove conversions at a glance.",
+      "category": "Data Analysis",
+      "expectedSkills": [
+        "SpreadsheetAnalyzer",
+        "SpreadsheetEditor",
+        "DataVisualizer"
+      ],
+      "retrievedSkills": [
+        "DataVisualizer",
+        "SpreadsheetEditor"
+      ],
+      "missingSkills": [
+        "SpreadsheetAnalyzer"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_163",
+      "task": "Our engineering team wrote a highly technical whitepaper about our new inference architecture. I need to reach out to three enterprise CIOs who are business executives, not engineers. They need to understand why this matters commercially, not how it works mechanically. Help me put together the outreach.",
+      "category": "Communication",
+      "expectedSkills": [
+        "DocumentReader",
+        "ToneRewriter",
+        "EmailDraftComposer"
+      ],
+      "retrievedSkills": [
+        "EmailDraftComposer"
+      ],
+      "missingSkills": [
+        "DocumentReader",
+        "ToneRewriter"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_166",
+      "task": "We are about to migrate our entire payment infrastructure from Stripe to an in-house solution in 90 days. Before we write a single line of code, I want to know everything that could go wrong, how likely and how severe each scenario is, and I need an actual response playbook — not just a list of risks, but what we concretely do if each one materializes.",
+      "category": "Project Management",
+      "expectedSkills": [
+        "RiskAssessor",
+        "ProjectPlanGenerator"
+      ],
+      "retrievedSkills": [
+        "RiskAssessor"
+      ],
+      "missingSkills": [
+        "ProjectPlanGenerator"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_167",
+      "task": "The CEO asked me in today's all-hands: 'Why are we losing SMB customers?' I have until Monday to have something concrete on her desk — backed by actual numbers from our database, something visual to support the narrative, and a proper document she can forward to the board without embarrassment.",
+      "category": "Data Analysis",
+      "expectedSkills": [
+        "SQLQueryRunner",
+        "DataVisualizer",
+        "ReportGenerator"
+      ],
+      "retrievedSkills": [
+        "SQLQueryRunner",
+        "ReportGenerator"
+      ],
+      "missingSkills": [
+        "DataVisualizer"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_168",
+      "task": "I have an interview for a senior data scientist role at Airbnb next month. I have attached both the job posting and my CV. Tell me honestly how competitive I am, point out what is holding me back on paper, and make sure I am not walking in cold to the actual conversation.",
+      "category": "Miscellaneous",
+      "expectedSkills": [
+        "JobDescriptionAnalyzer",
+        "ResumeReviewer",
+        "InterviewPreparation"
+      ],
+      "retrievedSkills": [
+        "InterviewPreparation",
+        "JobDescriptionAnalyzer"
+      ],
+      "missingSkills": [
+        "ResumeReviewer"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_170",
+      "task": "Our finance team does month-end close a different way every single cycle. I want to nail down exactly how it should be done, step by step, so any team member can pick it up without asking questions. And I need the final output in a format they can physically print out and keep at their desk.",
+      "category": "Documents",
+      "expectedSkills": [
+        "SOPGenerator",
+        "WordDocumentCreator",
+        "PDFGenerator"
+      ],
+      "retrievedSkills": [
+        "SOPGenerator"
+      ],
+      "missingSkills": [
+        "WordDocumentCreator",
+        "PDFGenerator"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_171",
+      "task": "I just got dropped into an unfamiliar Python repo and told to fix a bug in the authentication middleware causing intermittent 401s. I need to get my bearings in the overall codebase, make sense of the specific module where the issue lives, and then formally capture the bug so the whole team can track it properly.",
+      "category": "Software Engineering",
+      "expectedSkills": [
+        "GitHubRepoAnalyzer",
+        "CodeExplainer",
+        "GitHubIssueCreator"
+      ],
+      "retrievedSkills": [
+        "CodeDebugger",
+        "GitHubRepoAnalyzer",
+        "CodeExplainer",
+        "GitHubIssueCreator"
+      ],
+      "missingSkills": [],
+      "reason": "False positive skills were retrieved or selected."
+    },
+    {
+      "taskId": "task_173",
+      "task": "We have accumulated three years of process guides, onboarding docs, and meeting notes scattered across Notion and Google Drive. New hires waste their first week just trying to find things. I want to fix this permanently: cut out all the bloat and redundancy, and reorganize everything so it is actually findable and navigable.",
+      "category": "Knowledge Management",
+      "expectedSkills": [
+        "DocumentSummarizer",
+        "KnowledgeBaseBuilder"
+      ],
+      "retrievedSkills": [
+        "KnowledgeBaseBuilder"
+      ],
+      "missingSkills": [
+        "DocumentSummarizer"
+      ],
+      "reason": "Expected skill was not retrieved or selected."
+    },
+    {
+      "taskId": "task_176",
+      "task": "We just closed the FY24 books. Finance confirmed we burned 40% over plan in engineering headcount and came in 60% below plan on marketing spend. I want to understand how we got so far off, and then I want a FY25 plan that is actually grounded in what happened — not what we wished would happen.",
+      "category": "Finance",
+      "expectedSkills": [
+        "FinancialStatementAnalyzer",
+        "BudgetPlanner"
+      ],
+      "retrievedSkills": [
+        "FinancialStatementAnalyzer",
+        "FinancialForecaster"
+      ],
+      "missingSkills": [
+        "BudgetPlanner"
+      ],
+      "reason": "Expected skill was not retrieved or selected. AND False positive skills were retrieved or selected."
+    },
+    {
+      "taskId": "task_179",
+      "task": "Leadership is going into the all-hands in 45 minutes and they are about to get live questions about the mobile relaunch. Pull the latest on where things actually stand and post something concise in #exec-updates that they can reference during the call — they do not have time to log into Jira.",
+      "category": "Project Management",
+      "expectedSkills": [
+        "ProjectStatusTracker",
+        "SlackMessageComposer"
+      ],
+      "retrievedSkills": [
+        "SlackMessageComposer",
+        "KnowledgeBaseSearcher"
+      ],
+      "missingSkills": [
+        "ProjectStatusTracker"
+      ],
+      "reason": "Expected skill was not retrieved or selected. AND False positive skills were retrieved or selected."
+    }
+  ],
+  "generatedAt": "2026-06-04T20:48:47.612Z"
+}

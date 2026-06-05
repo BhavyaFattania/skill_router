@@ -1,0 +1,1589 @@
+[
+  {
+    "id": "skill_001",
+    "name": "WebResearchSummarizer",
+    "category": "Research",
+    "description": "Searches the web for information on a given topic and synthesizes findings into a coherent cited summary. Handles multi-source aggregation, contradiction resolution, and relevance filtering.",
+    "triggerConditions": [
+      "User wants information from multiple web sources",
+      "User asks about current events or recent developments",
+      "User requests topic research without providing source documents"
+    ],
+    "examples": [
+      "Research the latest advancements in solid-state batteries",
+      "Summarize analyst opinions on the EV market in 2025",
+      "What are the latest developments in AI regulation?"
+    ],
+    "limitations": [
+      "Not intended for academic literature reviews — use AcademicPaperAnalyzer",
+      "Should not be used when documents are already provided by the user",
+      "Cannot access private or internal company knowledge"
+    ],
+    "keywords": ["research", "web search", "summary", "synthesis", "current events", "trends", "investigation"],
+    "inputTypes": ["natural language question"],
+    "outputTypes": ["summary", "cited report"],
+    "skillBody": [
+      "Search multiple web sources",
+      "Filter unreliable or low-quality sources",
+      "Identify major themes and consensus",
+      "Resolve conflicting information across sources",
+      "Generate a structured cited summary"
+    ]
+  },
+  {
+    "id": "skill_002",
+    "name": "AcademicPaperAnalyzer",
+    "category": "Research",
+    "description": "Reads and analyzes academic papers (PDFs or URLs), extracting methodology, findings, limitations, and contribution to the field. Can compare multiple papers and identify research gaps.",
+    "triggerConditions": [
+      "User uploads or links to a research paper and wants analysis",
+      "User wants to understand the methodology or conclusions of a study",
+      "User is conducting a literature review"
+    ],
+    "examples": [
+      "Analyze this paper and tell me its main contributions and weaknesses",
+      "Compare these two papers on transformer architectures",
+      "What methodology does this study use and is it statistically sound?"
+    ],
+    "limitations": [
+      "Not for general web research — use WebResearchSummarizer",
+      "Does not perform statistical re-analysis of raw data",
+      "Should not be selected for summarizing blog posts or news articles"
+    ],
+    "keywords": ["academic", "paper", "research", "study", "methodology", "literature review", "findings", "citations"],
+    "inputTypes": ["PDF", "URL", "DOI"],
+    "outputTypes": ["structured analysis", "summary", "comparison report"],
+    "skillBody": [
+      "Extract abstract, methodology, findings, and limitations",
+      "Identify statistical methods used",
+      "Assess study quality and reproducibility",
+      "Compare across multiple papers if provided",
+      "Highlight research gaps and future work suggestions"
+    ]
+  },
+  {
+    "id": "skill_003",
+    "name": "CompetitorIntelligenceGatherer",
+    "category": "Research",
+    "description": "Researches and profiles competitor companies by aggregating public information including product offerings, pricing, recent news, leadership, and strategic direction. Produces structured competitive analysis reports.",
+    "triggerConditions": [
+      "User wants to understand a competitor's positioning or strategy",
+      "User is preparing a competitive analysis or market map",
+      "User asks how a company's products compare to others in the market"
+    ],
+    "examples": [
+      "Give me a competitive breakdown of Salesforce vs HubSpot for SMBs",
+      "What are Notion's main weaknesses compared to Confluence?",
+      "Research our top 3 competitors and summarize their go-to-market strategies"
+    ],
+    "limitations": [
+      "Cannot access paywalled financial filings or private company data",
+      "Not suitable for deep technical product benchmarking",
+      "Should not replace dedicated market research platforms"
+    ],
+    "keywords": ["competitor", "competitive analysis", "market research", "positioning", "benchmarking", "strategy"],
+    "inputTypes": ["company name", "industry", "natural language query"],
+    "outputTypes": ["competitive analysis report", "comparison table"],
+    "skillBody": [
+      "Identify key competitors",
+      "Aggregate public information on products and pricing",
+      "Summarize recent news and strategic moves",
+      "Compare feature sets and market positioning",
+      "Produce a structured competitive profile"
+    ]
+  },
+  {
+    "id": "skill_004",
+    "name": "FactChecker",
+    "category": "Research",
+    "description": "Verifies specific factual claims by cross-referencing multiple authoritative sources. Flags unsupported, contested, or false claims and provides sourced corrections or confirmations.",
+    "triggerConditions": [
+      "User wants to verify whether a specific claim is true",
+      "User needs to fact-check content before publishing",
+      "User expresses doubt about a statistic or assertion"
+    ],
+    "examples": [
+      "Is it true that Python is the most used programming language in 2024?",
+      "Fact-check this paragraph from our press release",
+      "Verify this statistic: 70% of startups fail in the first year"
+    ],
+    "limitations": [
+      "Not designed for broad research — focuses on specific claim verification",
+      "Cannot verify internal or proprietary company claims",
+      "Should not be used for legal or medical verification requiring licensed professionals"
+    ],
+    "keywords": ["fact check", "verify", "claim", "truth", "validate", "misinformation", "accuracy"],
+    "inputTypes": ["natural language claim", "text snippet"],
+    "outputTypes": ["verification report", "annotated text"],
+    "skillBody": [
+      "Parse and isolate individual factual claims",
+      "Cross-reference claims against authoritative sources",
+      "Classify each claim as supported, contested, or false",
+      "Provide sourced corrections where applicable",
+      "Return a structured fact-check report"
+    ]
+  },
+  {
+    "id": "skill_005",
+    "name": "CalendarEventScheduler",
+    "category": "Productivity",
+    "description": "Creates, modifies, and deletes calendar events on connected calendar services (Google Calendar, Outlook). Handles time zone resolution, recurrence rules, attendee invites, and conflict detection.",
+    "triggerConditions": [
+      "User wants to schedule a meeting or event",
+      "User asks to block time on their calendar",
+      "User wants to set a recurring reminder or appointment"
+    ],
+    "examples": [
+      "Schedule a 1-hour team standup every Monday at 9am",
+      "Block my calendar next Friday afternoon for deep work",
+      "Create a meeting with john@example.com for Tuesday at 3pm EST"
+    ],
+    "limitations": [
+      "Requires calendar integration to be connected",
+      "Does not find optimal meeting windows across attendees — use MeetingOptimizer",
+      "Not suitable for building meeting agendas — use MeetingAgendaBuilder"
+    ],
+    "keywords": ["calendar", "schedule", "event", "meeting", "appointment", "recurring", "invite"],
+    "inputTypes": ["natural language request", "structured event details"],
+    "outputTypes": ["calendar event", "confirmation"],
+    "skillBody": [
+      "Parse natural language time expressions",
+      "Resolve time zones across participants",
+      "Check for calendar conflicts",
+      "Apply recurrence rules if needed",
+      "Create or update the event via calendar API"
+    ]
+  },
+  {
+    "id": "skill_006",
+    "name": "MeetingOptimizer",
+    "category": "Productivity",
+    "description": "Analyzes calendars of multiple participants to find optimal meeting windows, considering time zones, working hours, existing commitments, and stated preferences. Suggests ranked time slots.",
+    "triggerConditions": [
+      "User wants to find a meeting time that works for multiple people",
+      "User is coordinating across time zones and needs scheduling assistance",
+      "User asks when everyone on a team is free"
+    ],
+    "examples": [
+      "Find a time for a 30-minute call with Alice in London and Bob in Tokyo this week",
+      "When can our whole team meet next week? Everyone's calendar is connected",
+      "What's the best time for a bi-weekly sync between NYC and SF teams?"
+    ],
+    "limitations": [
+      "Requires access to all participants' calendars",
+      "Does not create the event — use CalendarEventScheduler for that",
+      "Cannot account for informal preferences not reflected in calendar data"
+    ],
+    "keywords": ["scheduling", "availability", "time zones", "meeting coordination", "calendar optimization"],
+    "inputTypes": ["participant list", "duration", "time zone constraints"],
+    "outputTypes": ["ranked time slot suggestions"],
+    "skillBody": [
+      "Fetch calendar availability for all participants",
+      "Apply time zone normalization",
+      "Identify overlapping free windows",
+      "Rank slots by quality (fewest conflicts, best hours)",
+      "Return top suggested meeting times"
+    ]
+  },
+  {
+    "id": "skill_007",
+    "name": "TaskManager",
+    "category": "Productivity",
+    "description": "Creates, updates, assigns, prioritizes, and closes tasks in connected task management tools (Todoist, Asana, Jira, Linear, Notion). Supports natural language task creation with due dates, priorities, and tags.",
+    "triggerConditions": [
+      "User wants to add, edit, or complete a task or to-do item",
+      "User asks to create action items from a conversation",
+      "User wants to view or update their task list"
+    ],
+    "examples": [
+      "Add a task to review the Q3 report by Friday with high priority",
+      "Mark the onboarding checklist task as done",
+      "Create tasks from the action items in this meeting notes document"
+    ],
+    "limitations": [
+      "Not for project-level planning — use ProjectPlanGenerator",
+      "Cannot manage tasks in disconnected tools",
+      "Should not be selected for calendar events or reminders"
+    ],
+    "keywords": ["task", "to-do", "action item", "assign", "priority", "deadline", "checklist"],
+    "inputTypes": ["natural language request", "meeting notes", "structured task data"],
+    "outputTypes": ["task entry", "task list update"],
+    "skillBody": [
+      "Parse task details from natural language",
+      "Extract due dates, priorities, and assignees",
+      "Create or update tasks in connected tool",
+      "Apply labels and tags",
+      "Confirm task creation or update to user"
+    ]
+  },
+  {
+    "id": "skill_008",
+    "name": "EmailDraftComposer",
+    "category": "Communication",
+    "description": "Composes professional email drafts based on user intent, context, and tone preferences. Handles cold outreach, follow-ups, meeting requests, feedback delivery, apologies, and formal correspondence.",
+    "triggerConditions": [
+      "User wants to write or draft an email",
+      "User describes a situation and asks for help responding via email",
+      "User needs to communicate something formally in writing"
+    ],
+    "examples": [
+      "Write a follow-up email to a client who hasn't responded in two weeks",
+      "Draft a polite rejection email for a job applicant",
+      "Compose a cold outreach email to a potential enterprise customer"
+    ],
+    "limitations": [
+      "Does not send emails — use EmailSender for delivery",
+      "Not designed for internal Slack or chat messages — use SlackMessageComposer",
+      "Should not be used for legal notices requiring attorney review"
+    ],
+    "keywords": ["email", "draft", "compose", "outreach", "follow-up", "reply", "correspondence"],
+    "inputTypes": ["natural language intent", "context description", "recipient info"],
+    "outputTypes": ["email draft"],
+    "skillBody": [
+      "Understand intent and desired tone",
+      "Identify recipient and relationship context",
+      "Draft subject line and email body",
+      "Adjust register (formal, semi-formal, casual)",
+      "Return polished draft for user review"
+    ]
+  },
+  {
+    "id": "skill_009",
+    "name": "EmailSender",
+    "category": "Communication",
+    "description": "Sends emails through connected email accounts (Gmail, Outlook). Can use drafted content or compose and send in one step. Supports CC/BCC, attachments, reply threading, and scheduled sending.",
+    "triggerConditions": [
+      "User explicitly asks to send an email",
+      "User approves a draft and wants it delivered",
+      "User wants to schedule an email for a specific send time"
+    ],
+    "examples": [
+      "Send this draft to the team now",
+      "Email the proposal to client@company.com with the attached PDF",
+      "Schedule this email to go out Monday morning at 8am"
+    ],
+    "limitations": [
+      "Requires a connected email account",
+      "Should not be used to only draft content — use EmailDraftComposer",
+      "Cannot send to distribution lists without proper permissions"
+    ],
+    "keywords": ["send email", "deliver", "outbox", "Gmail", "Outlook", "attach", "schedule send"],
+    "inputTypes": ["email draft", "recipient address", "attachment"],
+    "outputTypes": ["sent email confirmation"],
+    "skillBody": [
+      "Validate recipient addresses",
+      "Attach files if specified",
+      "Apply CC/BCC as directed",
+      "Schedule delivery time if specified",
+      "Send via connected email provider and confirm"
+    ]
+  },
+  {
+    "id": "skill_010",
+    "name": "SlackMessageComposer",
+    "category": "Communication",
+    "description": "Drafts and optionally sends Slack messages including channel posts, direct messages, and threaded replies. Adapts tone to informal workplace communication and formats with Slack markdown.",
+    "triggerConditions": [
+      "User wants to write a Slack message or announcement",
+      "User wants to reply to a Slack thread",
+      "User asks for help communicating something informally to colleagues"
+    ],
+    "examples": [
+      "Write a Slack announcement for our product launch tomorrow",
+      "Draft a DM to my manager asking for time off next week",
+      "Post a team update in #engineering about the deployment"
+    ],
+    "limitations": [
+      "Not for formal email communication — use EmailDraftComposer",
+      "Sending requires Slack integration to be connected",
+      "Not suitable for long-form documents or reports"
+    ],
+    "keywords": ["Slack", "message", "channel", "DM", "announcement", "post", "thread"],
+    "inputTypes": ["natural language intent", "channel name", "context"],
+    "outputTypes": ["Slack message draft", "sent Slack message"],
+    "skillBody": [
+      "Identify target channel or recipient",
+      "Adapt tone for workplace chat context",
+      "Apply Slack markdown formatting",
+      "Draft message content",
+      "Send via Slack API if connected and confirmed"
+    ]
+  },
+  {
+    "id": "skill_011",
+    "name": "MeetingNotesTranscriber",
+    "category": "Productivity",
+    "description": "Processes meeting transcripts or recordings and produces structured notes including summary, key decisions, action items with owners, open questions, and next steps.",
+    "triggerConditions": [
+      "User provides a meeting transcript and wants it processed",
+      "User uploads a recording or transcript file",
+      "User asks for action items or a summary from a meeting"
+    ],
+    "examples": [
+      "Summarize this meeting transcript and extract all action items",
+      "Turn this Zoom transcript into structured meeting notes",
+      "Who owns what from this meeting? Extract action items with owners"
+    ],
+    "limitations": [
+      "Requires transcript or recording input — cannot attend live meetings",
+      "Does not send meeting notes — use EmailSender or SlackMessageComposer",
+      "Not appropriate for generating pre-meeting agendas — use MeetingAgendaBuilder"
+    ],
+    "keywords": ["meeting notes", "transcript", "action items", "summary", "decisions", "follow-up"],
+    "inputTypes": ["transcript text", "audio file", "video file"],
+    "outputTypes": ["structured meeting notes", "action item list"],
+    "skillBody": [
+      "Ingest and parse transcript or audio",
+      "Identify speakers and attribute statements",
+      "Extract decisions made",
+      "List action items with owners and due dates",
+      "Summarize open questions and next steps"
+    ]
+  },
+  {
+    "id": "skill_012",
+    "name": "MeetingAgendaBuilder",
+    "category": "Productivity",
+    "description": "Creates structured meeting agendas based on meeting purpose, attendees, duration, and prior context. Suggests time allocations for each agenda item, pre-read materials, and facilitator notes.",
+    "triggerConditions": [
+      "User wants to prepare an agenda before a meeting",
+      "User asks what topics to cover in an upcoming meeting",
+      "User is planning a workshop or structured session"
+    ],
+    "examples": [
+      "Build an agenda for a 60-minute quarterly planning meeting with leadership",
+      "Create a structured agenda for a project kickoff with a new client",
+      "What should we cover in tomorrow's product review? Generate an agenda"
+    ],
+    "limitations": [
+      "Does not produce post-meeting notes — use MeetingNotesTranscriber",
+      "Not for scheduling the meeting itself — use CalendarEventScheduler",
+      "Should not be selected for general document creation"
+    ],
+    "keywords": ["agenda", "meeting plan", "topics", "schedule", "facilitation", "workshop"],
+    "inputTypes": ["meeting purpose", "attendee list", "duration", "context"],
+    "outputTypes": ["agenda document"],
+    "skillBody": [
+      "Identify meeting type and objectives",
+      "Propose agenda items based on purpose and attendees",
+      "Allocate time to each item",
+      "Add facilitator tips and pre-read suggestions",
+      "Format as a structured agenda document"
+    ]
+  },
+  {
+    "id": "skill_013",
+    "name": "GitHubIssueReader",
+    "category": "Software Engineering",
+    "description": "Fetches and reads GitHub issues from a specified repository. Retrieves issue details, comments, labels, assignees, linked PRs, and status. Supports filtering by label, milestone, assignee, or state.",
+    "triggerConditions": [
+      "User wants to read or view existing GitHub issues",
+      "User asks what issues are open in a repository",
+      "User wants to understand the details of a specific GitHub issue"
+    ],
+    "examples": [
+      "Show me all open bugs labeled 'critical' in the backend repo",
+      "What's the current status of issue #452?",
+      "List all issues assigned to me in the frontend repository"
+    ],
+    "limitations": [
+      "Cannot create or modify issues — use GitHubIssueCreator",
+      "Requires GitHub integration and appropriate repository access",
+      "Not suitable for reading pull requests — use GitHubPRReviewer"
+    ],
+    "keywords": ["GitHub", "issue", "bug", "ticket", "read", "list", "filter", "repository"],
+    "inputTypes": ["repository name", "issue number", "filter criteria"],
+    "outputTypes": ["issue details", "issue list"],
+    "skillBody": [
+      "Authenticate with GitHub API",
+      "Fetch issues matching filters",
+      "Retrieve comments and linked references",
+      "Format issue data for readability",
+      "Return structured issue output"
+    ]
+  },
+  {
+    "id": "skill_014",
+    "name": "GitHubIssueCreator",
+    "category": "Software Engineering",
+    "description": "Creates new GitHub issues in a specified repository. Supports setting title, body, labels, assignees, milestone, and project associations. Can generate issue content from user descriptions or bug reports.",
+    "triggerConditions": [
+      "User wants to file a new GitHub issue",
+      "User describes a bug or feature request to be tracked",
+      "User asks to create a ticket from a conversation or document"
+    ],
+    "examples": [
+      "Create a GitHub issue for the login page crash on Safari",
+      "File a feature request issue for dark mode support in the mobile app",
+      "Turn these 3 bugs from the QA report into GitHub issues"
+    ],
+    "limitations": [
+      "Cannot read or update existing issues — use GitHubIssueReader",
+      "Requires write access to the target repository",
+      "Not for pull request creation"
+    ],
+    "keywords": ["GitHub", "create issue", "file bug", "feature request", "ticket", "new issue"],
+    "inputTypes": ["issue description", "bug report", "feature request text"],
+    "outputTypes": ["GitHub issue URL", "issue confirmation"],
+    "skillBody": [
+      "Parse issue title and description from input",
+      "Assign labels, milestone, and assignees",
+      "Format body with markdown",
+      "Submit issue via GitHub API",
+      "Return created issue URL"
+    ]
+  },
+  {
+    "id": "skill_015",
+    "name": "GitHubPRReviewer",
+    "category": "Software Engineering",
+    "description": "Analyzes GitHub pull requests including code diffs, commit history, and review comments. Provides structured feedback on code quality, logic errors, test coverage, and adherence to conventions. Can summarize PR changes.",
+    "triggerConditions": [
+      "User wants to review a pull request",
+      "User asks for feedback on code changes in a PR",
+      "User wants a plain-language summary of what a PR does"
+    ],
+    "examples": [
+      "Review PR #88 and flag any potential bugs",
+      "Summarize what changes PR #201 introduces to the auth module",
+      "Give me feedback on this PR diff before I merge it"
+    ],
+    "limitations": [
+      "Cannot merge or close PRs — requires separate user action",
+      "Not for creating issues — use GitHubIssueCreator",
+      "Should not be selected for repository-level analysis — use GitHubRepoAnalyzer"
+    ],
+    "keywords": ["pull request", "PR", "code review", "diff", "merge", "GitHub", "feedback"],
+    "inputTypes": ["PR number", "repository name", "diff text"],
+    "outputTypes": ["review feedback", "PR summary"],
+    "skillBody": [
+      "Fetch PR diff and commit history",
+      "Analyze code changes for bugs and style issues",
+      "Check test coverage impact",
+      "Generate structured review comments",
+      "Summarize overall PR changes in plain language"
+    ]
+  },
+  {
+    "id": "skill_016",
+    "name": "GitHubRepoAnalyzer",
+    "category": "Software Engineering",
+    "description": "Performs high-level analysis of a GitHub repository including codebase structure, tech stack, contributor activity, open issue and PR volume, test coverage trends, and dependency health. Produces an architectural overview.",
+    "triggerConditions": [
+      "User wants an overview or audit of an entire repository",
+      "User is onboarding to a new codebase and wants to understand its structure",
+      "User wants to assess the health or activity of a GitHub project"
+    ],
+    "examples": [
+      "Give me an overview of this open-source repo before I contribute",
+      "Analyze the dependency health of our main backend repository",
+      "What are the most active areas of this codebase in the last 90 days?"
+    ],
+    "limitations": [
+      "Not for reviewing individual PRs — use GitHubPRReviewer",
+      "Not for reading specific issues — use GitHubIssueReader",
+      "Requires repository access; may be limited on private repos"
+    ],
+    "keywords": ["repository", "codebase", "architecture", "repo health", "tech stack", "dependencies", "contributors"],
+    "inputTypes": ["repository URL", "repository name"],
+    "outputTypes": ["architectural overview", "health report"],
+    "skillBody": [
+      "Clone or fetch repository metadata",
+      "Map directory structure and tech stack",
+      "Analyze contributor activity and commit cadence",
+      "Assess dependency versions and known vulnerabilities",
+      "Produce a structured repository health report"
+    ]
+  },
+  {
+    "id": "skill_017",
+    "name": "CodeDebugger",
+    "category": "Software Engineering",
+    "description": "Analyzes provided code snippets or files to identify bugs, logic errors, runtime exceptions, and edge case failures. Explains root causes and provides corrected code. Supports multiple programming languages.",
+    "triggerConditions": [
+      "User shares code and reports an error or unexpected behavior",
+      "User pastes a stack trace and asks what is wrong",
+      "User says their code is not working as expected"
+    ],
+    "examples": [
+      "This Python function throws a KeyError — can you find the bug?",
+      "My React component re-renders infinitely. What's causing it?",
+      "Debug this SQL query that returns duplicate rows"
+    ],
+    "limitations": [
+      "Cannot run or execute code — use CodeExecutor for that",
+      "Not designed for generating new code from scratch — use CodeGenerator",
+      "Should not be selected for PR review workflows — use GitHubPRReviewer"
+    ],
+    "keywords": ["debug", "bug", "error", "fix", "stack trace", "exception", "runtime", "issue"],
+    "inputTypes": ["code snippet", "stack trace", "error message"],
+    "outputTypes": ["root cause explanation", "corrected code"],
+    "skillBody": [
+      "Parse and understand the code structure",
+      "Trace execution path for the reported error",
+      "Identify root cause of the bug",
+      "Suggest minimal corrective changes",
+      "Return corrected code with explanation"
+    ]
+  },
+  {
+    "id": "skill_018",
+    "name": "CodeGenerator",
+    "category": "Software Engineering",
+    "description": "Generates new code from natural language specifications. Supports functions, classes, APIs, scripts, and boilerplate across multiple programming languages and frameworks. Applies best practices and includes inline documentation.",
+    "triggerConditions": [
+      "User asks to write a new function, script, or component",
+      "User describes desired behavior and wants working code produced",
+      "User needs boilerplate or starter code for a task"
+    ],
+    "examples": [
+      "Write a Python function to parse nested JSON and flatten it",
+      "Generate a REST API endpoint in FastAPI for user registration",
+      "Create a React component for a responsive navbar with a hamburger menu"
+    ],
+    "limitations": [
+      "Not for debugging existing code — use CodeDebugger",
+      "Does not execute or test the generated code — use CodeExecutor",
+      "Not appropriate for explaining existing code — use CodeExplainer"
+    ],
+    "keywords": ["generate code", "write function", "create script", "boilerplate", "implement", "build component"],
+    "inputTypes": ["natural language specification", "function signature", "requirements"],
+    "outputTypes": ["code snippet", "complete file"],
+    "skillBody": [
+      "Parse natural language specification",
+      "Select appropriate language and framework",
+      "Generate code following best practices",
+      "Add inline comments and docstrings",
+      "Return complete, ready-to-use code"
+    ]
+  },
+  {
+    "id": "skill_019",
+    "name": "CodeExplainer",
+    "category": "Software Engineering",
+    "description": "Reads and explains existing code in plain language. Describes what a function, module, or file does, identifies design patterns used, and maps dependencies. Useful for onboarding, documentation, and code review.",
+    "triggerConditions": [
+      "User shares code and asks what it does",
+      "User wants a plain-language explanation of a function or module",
+      "User is trying to understand an unfamiliar codebase section"
+    ],
+    "examples": [
+      "Explain what this middleware function does line by line",
+      "What design pattern is used in this class?",
+      "Walk me through this authentication module in simple terms"
+    ],
+    "limitations": [
+      "Not for fixing bugs — use CodeDebugger",
+      "Not for generating new code — use CodeGenerator",
+      "Should not be used for full repository analysis — use GitHubRepoAnalyzer"
+    ],
+    "keywords": ["explain code", "understand", "walkthrough", "documentation", "design pattern", "plain language"],
+    "inputTypes": ["code snippet", "file", "module"],
+    "outputTypes": ["plain language explanation", "annotated code"],
+    "skillBody": [
+      "Parse and tokenize the provided code",
+      "Identify language, framework, and design patterns",
+      "Map data flow and control flow",
+      "Translate logic into plain language",
+      "Return a structured explanation with annotations"
+    ]
+  },
+  {
+    "id": "skill_020",
+    "name": "CodeExecutor",
+    "category": "Software Engineering",
+    "description": "Executes code snippets in a sandboxed environment and returns output, errors, or computed results. Supports Python, JavaScript, and Bash. Useful for verifying logic, running data transformations, or quick computations.",
+    "triggerConditions": [
+      "User explicitly wants code to be run or executed",
+      "User wants to verify the output of a script",
+      "User needs to compute something programmatically"
+    ],
+    "examples": [
+      "Run this Python script and show me the output",
+      "Execute this data transformation and return the result",
+      "Test if this sorting algorithm works correctly on this input"
+    ],
+    "limitations": [
+      "Sandboxed environment — no external network access or persistent file system",
+      "Not for code generation — use CodeGenerator",
+      "Not for debugging without execution context — use CodeDebugger"
+    ],
+    "keywords": ["run code", "execute", "output", "test", "sandbox", "compute", "script"],
+    "inputTypes": ["code snippet", "input data"],
+    "outputTypes": ["execution output", "error trace", "computed result"],
+    "skillBody": [
+      "Receive and validate code input",
+      "Spin up sandboxed execution environment",
+      "Run the code with provided inputs",
+      "Capture stdout, stderr, and return values",
+      "Return formatted output or error trace"
+    ]
+  },
+  {
+    "id": "skill_021",
+    "name": "PDFReader",
+    "category": "Documents",
+    "description": "Extracts and processes text, tables, and metadata from PDF files. Supports scanned PDFs via OCR, multi-page navigation, and section extraction. Enables downstream Q&A, summarization, or data extraction from PDF content.",
+    "triggerConditions": [
+      "User uploads a PDF and wants to read or extract content from it",
+      "User asks questions about the contents of a PDF",
+      "User needs to parse tables or text from a PDF document"
+    ],
+    "examples": [
+      "What are the main conclusions in this PDF report?",
+      "Extract all the financial figures from this PDF into a table",
+      "Summarize pages 5 through 12 of this contract PDF"
+    ],
+    "limitations": [
+      "Cannot modify or fill PDF forms — use PDFFormFiller",
+      "Cannot generate new PDFs — use PDFGenerator",
+      "Complex image-heavy PDFs may have extraction accuracy issues"
+    ],
+    "keywords": ["PDF", "read", "extract", "parse", "OCR", "text extraction", "document"],
+    "inputTypes": ["PDF file", "PDF URL"],
+    "outputTypes": ["extracted text", "structured data", "summary"],
+    "skillBody": [
+      "Load and validate PDF file",
+      "Apply OCR if document is scanned",
+      "Extract text and tables by page or section",
+      "Parse metadata (author, date, title)",
+      "Return structured content for downstream use"
+    ]
+  },
+  {
+    "id": "skill_022",
+    "name": "PDFGenerator",
+    "category": "Documents",
+    "description": "Creates new PDF documents from provided content, templates, or structured data. Supports custom layouts, headers, footers, tables, charts, and branding. Can convert HTML, Markdown, or Word content into PDF.",
+    "triggerConditions": [
+      "User wants to create or export a document as a PDF",
+      "User asks to generate a PDF report, invoice, or certificate",
+      "User wants to convert existing content into a PDF file"
+    ],
+    "examples": [
+      "Generate a branded PDF report from this Markdown content",
+      "Create a PDF invoice for this order summary",
+      "Export this proposal as a formatted PDF with our company logo"
+    ],
+    "limitations": [
+      "Cannot read or extract content from existing PDFs — use PDFReader",
+      "Cannot fill interactive form fields in existing PDFs — use PDFFormFiller",
+      "Not for editing existing PDF files"
+    ],
+    "keywords": ["PDF", "generate", "create", "export", "convert", "report", "document output"],
+    "inputTypes": ["Markdown", "HTML", "structured data", "Word document"],
+    "outputTypes": ["PDF file"],
+    "skillBody": [
+      "Receive content or template input",
+      "Apply layout rules and branding",
+      "Render tables, charts, and images",
+      "Add headers, footers, and page numbers",
+      "Output a formatted PDF file"
+    ]
+  },
+  {
+    "id": "skill_023",
+    "name": "PDFFormFiller",
+    "category": "Documents",
+    "description": "Fills out interactive form fields in existing PDF documents using provided data. Supports text fields, checkboxes, dropdowns, and signature fields. Can auto-populate forms from structured data sources.",
+    "triggerConditions": [
+      "User has a PDF with form fields to fill out",
+      "User wants to populate a standard form with their data",
+      "User asks to auto-fill a PDF template with known field values"
+    ],
+    "examples": [
+      "Fill in this W-9 PDF form with the contractor's details",
+      "Auto-populate this vendor onboarding PDF with data from our CRM",
+      "Complete the fields in this NDA PDF template with the provided info"
+    ],
+    "limitations": [
+      "Only works on PDFs with interactive form fields — not flat PDFs",
+      "Cannot create a new PDF from scratch — use PDFGenerator",
+      "Cannot extract general text for reading — use PDFReader"
+    ],
+    "keywords": ["PDF form", "fill", "populate", "form fields", "checkbox", "signature", "auto-fill"],
+    "inputTypes": ["PDF with form fields", "structured field data"],
+    "outputTypes": ["completed PDF"],
+    "skillBody": [
+      "Detect and list interactive form fields",
+      "Map input data to field names",
+      "Fill text fields, checkboxes, and dropdowns",
+      "Apply digital signature if required",
+      "Return completed and saved PDF"
+    ]
+  },
+  {
+    "id": "skill_024",
+    "name": "SpreadsheetAnalyzer",
+    "category": "Data Analysis",
+    "description": "Reads and analyzes spreadsheet data (Excel, CSV, Google Sheets) to produce summaries, detect patterns, compute statistics, and answer questions about the data. Handles formulas, pivot-like aggregations, and cross-tab analysis.",
+    "triggerConditions": [
+      "User uploads a spreadsheet and wants to understand or analyze the data",
+      "User asks statistical or aggregation questions about tabular data",
+      "User wants to find patterns, outliers, or trends in a data file"
+    ],
+    "examples": [
+      "Analyze this sales CSV and tell me which region performed best",
+      "Find any outliers in this employee expense spreadsheet",
+      "Summarize the key trends in this monthly revenue Excel file"
+    ],
+    "limitations": [
+      "Not for generating charts or visualizations — use DataVisualizer",
+      "Cannot edit or write back to the spreadsheet — use SpreadsheetEditor",
+      "Not appropriate for SQL database queries — use SQLQueryRunner"
+    ],
+    "keywords": ["spreadsheet", "CSV", "Excel", "analyze", "statistics", "trends", "tabular data"],
+    "inputTypes": ["CSV file", "Excel file", "Google Sheets link"],
+    "outputTypes": ["analysis summary", "statistics report"],
+    "skillBody": [
+      "Load and validate spreadsheet data",
+      "Compute descriptive statistics",
+      "Detect outliers and anomalies",
+      "Perform grouping and aggregation",
+      "Return structured analytical summary"
+    ]
+  },
+  {
+    "id": "skill_025",
+    "name": "SpreadsheetEditor",
+    "category": "Data Analysis",
+    "description": "Modifies spreadsheet files (Excel, Google Sheets, CSV) by adding, updating, or deleting rows, columns, formulas, and formatting. Supports bulk operations, data transformations, and template population.",
+    "triggerConditions": [
+      "User wants to make changes to a spreadsheet file",
+      "User wants to add data, update values, or apply formulas",
+      "User wants to clean or reformat spreadsheet data"
+    ],
+    "examples": [
+      "Add a Total column to this spreadsheet that sums each row",
+      "Clean this CSV by removing duplicates and standardizing date formats",
+      "Update Q4 actuals in this financial model spreadsheet"
+    ],
+    "limitations": [
+      "Not for reading or analyzing data — use SpreadsheetAnalyzer",
+      "Not for generating charts — use DataVisualizer",
+      "Requires file access or integration to write changes back"
+    ],
+    "keywords": ["edit spreadsheet", "update", "add column", "clean data", "formula", "transform", "Excel edit"],
+    "inputTypes": ["spreadsheet file", "edit instructions"],
+    "outputTypes": ["modified spreadsheet file"],
+    "skillBody": [
+      "Load existing spreadsheet",
+      "Parse edit instructions",
+      "Apply row, column, or formula modifications",
+      "Perform data cleaning operations if needed",
+      "Save and return the modified spreadsheet"
+    ]
+  },
+  {
+    "id": "skill_026",
+    "name": "DataVisualizer",
+    "category": "Data Analysis",
+    "description": "Creates charts, graphs, and dashboards from structured data. Supports bar, line, pie, scatter, heatmap, and funnel charts. Accepts CSV, JSON, or spreadsheet input and produces embeddable or downloadable visuals.",
+    "triggerConditions": [
+      "User wants to create a chart or graph from data",
+      "User asks to visualize trends or comparisons in a dataset",
+      "User wants a visual dashboard or graphical summary of data"
+    ],
+    "examples": [
+      "Create a bar chart comparing monthly sales by region",
+      "Visualize this time-series data as a line graph",
+      "Build a heatmap showing customer activity by hour and day of week"
+    ],
+    "limitations": [
+      "Not for data analysis or statistics — use SpreadsheetAnalyzer or SQLQueryRunner",
+      "Cannot connect to live data sources for interactive dashboards",
+      "Not for generating written reports — use ReportGenerator"
+    ],
+    "keywords": ["chart", "graph", "visualize", "dashboard", "plot", "heatmap", "bar chart", "line chart"],
+    "inputTypes": ["CSV", "JSON", "spreadsheet data"],
+    "outputTypes": ["chart image", "embeddable visualization", "dashboard"],
+    "skillBody": [
+      "Parse and validate input data",
+      "Determine appropriate chart type based on data shape",
+      "Apply axis labels, titles, and color schemes",
+      "Render chart using visualization library",
+      "Return downloadable or embeddable chart output"
+    ]
+  },
+  {
+    "id": "skill_027",
+    "name": "SQLQueryRunner",
+    "category": "Data Analysis",
+    "description": "Writes and executes SQL queries against connected databases. Supports SELECT, aggregations, joins, subqueries, and window functions. Translates natural language questions into SQL and returns formatted results.",
+    "triggerConditions": [
+      "User wants to query a connected database",
+      "User asks a data question that requires database access",
+      "User provides a natural language question about structured database data"
+    ],
+    "examples": [
+      "How many active users signed up in the last 30 days?",
+      "Write a SQL query to find the top 10 customers by lifetime value",
+      "Join the orders and customers tables to show orders with customer names"
+    ],
+    "limitations": [
+      "Requires a connected and accessible database",
+      "Does not perform data visualization — use DataVisualizer",
+      "Write operations (INSERT, UPDATE, DELETE) require explicit user confirmation"
+    ],
+    "keywords": ["SQL", "query", "database", "SELECT", "join", "aggregate", "natural language to SQL"],
+    "inputTypes": ["natural language question", "schema description", "SQL query"],
+    "outputTypes": ["query results table", "SQL code"],
+    "skillBody": [
+      "Translate natural language to SQL if needed",
+      "Validate query against schema",
+      "Execute query on connected database",
+      "Format results as a readable table",
+      "Return results with query used"
+    ]
+  },
+  {
+    "id": "skill_028",
+    "name": "ReportGenerator",
+    "category": "Documents",
+    "description": "Produces structured written reports from data, research, or analysis inputs. Formats content with an executive summary, sections, findings, and recommendations. Supports business, technical, and analytical report types.",
+    "triggerConditions": [
+      "User wants to produce a formal written report",
+      "User has data or findings and wants them formatted as a report",
+      "User asks for a structured document summarizing analysis or research"
+    ],
+    "examples": [
+      "Generate a monthly performance report from this data",
+      "Write a competitive analysis report based on this research",
+      "Produce an executive summary report of our Q3 results"
+    ],
+    "limitations": [
+      "Not for simple document creation — use WordDocumentCreator",
+      "Not for chart or visualization creation — use DataVisualizer",
+      "Should not be selected when the user only wants a data summary"
+    ],
+    "keywords": ["report", "executive summary", "findings", "recommendations", "business report", "formal document"],
+    "inputTypes": ["data", "research notes", "analysis results", "natural language brief"],
+    "outputTypes": ["structured report document"],
+    "skillBody": [
+      "Understand report type and audience",
+      "Organize input into sections (summary, findings, analysis, recommendations)",
+      "Write narrative prose for each section",
+      "Embed tables or figures if provided",
+      "Format and return the final report"
+    ]
+  },
+  {
+    "id": "skill_029",
+    "name": "WordDocumentCreator",
+    "category": "Documents",
+    "description": "Creates formatted Microsoft Word (.docx) documents from scratch. Supports headings, tables, bullet points, images, table of contents, headers, footers, and custom styling. Outputs professional documents from structured input.",
+    "triggerConditions": [
+      "User wants to produce a Word document or .docx file",
+      "User asks for a downloadable document with rich formatting",
+      "User wants a professional template or structured Word file"
+    ],
+    "examples": [
+      "Create a Word document template for employee performance reviews",
+      "Generate a .docx proposal document from this outline",
+      "Make a formatted Word report with a table of contents and section headers"
+    ],
+    "limitations": [
+      "Not for PDFs — use PDFGenerator",
+      "Not for spreadsheets — use SpreadsheetEditor",
+      "Not for reading existing Word files — use DocumentReader"
+    ],
+    "keywords": ["Word", "docx", "document", "template", "formatted", "table of contents", "Microsoft Word"],
+    "inputTypes": ["outline", "structured content", "natural language brief"],
+    "outputTypes": [".docx file"],
+    "skillBody": [
+      "Parse content structure and formatting requirements",
+      "Apply heading hierarchy and styles",
+      "Insert tables, bullet lists, and images",
+      "Generate table of contents if requested",
+      "Export and return formatted .docx file"
+    ]
+  },
+  {
+    "id": "skill_030",
+    "name": "DocumentReader",
+    "category": "Documents",
+    "description": "Reads and extracts content from uploaded documents including Word (.docx), plain text, and Markdown files. Enables Q&A, summarization, and content extraction from provided documents.",
+    "triggerConditions": [
+      "User uploads a Word or text document and wants to understand its contents",
+      "User asks questions about the content of an uploaded document",
+      "User wants a summary or key points from a provided file"
+    ],
+    "examples": [
+      "What are the main points in this Word document?",
+      "Extract all action items from this uploaded report",
+      "Summarize this .docx contract in plain language"
+    ],
+    "limitations": [
+      "Cannot edit the document — use WordDocumentCreator or SpreadsheetEditor",
+      "Not for PDF reading — use PDFReader",
+      "Should not be selected for creating new documents from scratch"
+    ],
+    "keywords": ["read document", "Word", "docx", "text file", "extract", "summarize", "Q&A on document"],
+    "inputTypes": [".docx file", ".txt file", ".md file"],
+    "outputTypes": ["extracted content", "summary", "Q&A answers"],
+    "skillBody": [
+      "Load and parse uploaded document",
+      "Extract text content by section",
+      "Enable Q&A over document content",
+      "Identify key points and action items",
+      "Return structured content or answers"
+    ]
+  },
+  {
+    "id": "skill_031",
+    "name": "ResumeReviewer",
+    "category": "Miscellaneous",
+    "description": "Analyzes a resume for clarity, completeness, ATS compatibility, formatting, and impact of experience bullet points. Provides detailed feedback on how to improve the resume for a specific role or industry.",
+    "triggerConditions": [
+      "User uploads their resume and wants feedback or improvement suggestions",
+      "User asks how to make their CV stronger",
+      "User wants to know if their resume is optimized for a specific role"
+    ],
+    "examples": [
+      "Review my resume and tell me what to improve",
+      "Is my resume ATS-friendly for software engineering roles?",
+      "Give me feedback on the bullet points in my experience section"
+    ],
+    "limitations": [
+      "Not for writing a resume from scratch",
+      "Not for matching resume to a JD — use JobDescriptionAnalyzer",
+      "Should not be selected for interview coaching — use InterviewPreparation"
+    ],
+    "keywords": ["resume", "CV", "feedback", "ATS", "job application", "improve", "career"],
+    "inputTypes": ["resume file", "resume text"],
+    "outputTypes": ["structured feedback", "annotated resume"],
+    "skillBody": [
+      "Parse resume sections (summary, experience, education, skills)",
+      "Assess ATS keyword optimization",
+      "Evaluate bullet point impact and clarity",
+      "Check formatting and length",
+      "Return prioritized improvement suggestions"
+    ]
+  },
+  {
+    "id": "skill_032",
+    "name": "InterviewPreparation",
+    "category": "Miscellaneous",
+    "description": "Helps candidates prepare for job interviews by generating likely questions, coaching on STAR-method answers, providing role-specific technical questions, and giving feedback on practice responses.",
+    "triggerConditions": [
+      "User has an upcoming interview and wants to prepare",
+      "User asks for practice interview questions for a role",
+      "User wants feedback on their interview answer quality"
+    ],
+    "examples": [
+      "I have a product manager interview at Google — what questions should I prepare for?",
+      "Give me 10 behavioral interview questions for a senior engineer role",
+      "Evaluate my answer to this interview question and suggest improvements"
+    ],
+    "limitations": [
+      "Not for resume review — use ResumeReviewer",
+      "Not for analyzing job postings — use JobDescriptionAnalyzer",
+      "Not a substitute for actual mock interviews with human interviewers"
+    ],
+    "keywords": ["interview", "prepare", "practice", "questions", "STAR", "behavioral", "technical interview"],
+    "inputTypes": ["role title", "company name", "interview type", "practice answer"],
+    "outputTypes": ["question list", "feedback on answers", "coaching tips"],
+    "skillBody": [
+      "Identify role and interview type",
+      "Generate relevant behavioral and technical questions",
+      "Coach on STAR method response structure",
+      "Evaluate provided practice answers",
+      "Return improvement tips and model answers"
+    ]
+  },
+  {
+    "id": "skill_033",
+    "name": "JobDescriptionAnalyzer",
+    "category": "Miscellaneous",
+    "description": "Analyzes job postings to extract required skills, responsibilities, compensation signals, culture indicators, and potential red flags. Can match a resume or candidate profile against a JD and score fit.",
+    "triggerConditions": [
+      "User pastes or uploads a job description and wants it analyzed",
+      "User wants to understand what a specific role requires",
+      "User asks how well their background matches a job posting"
+    ],
+    "examples": [
+      "Analyze this job posting and tell me the top 5 required skills",
+      "How well does my resume match this job description?",
+      "Are there any red flags or unusual requirements in this JD?"
+    ],
+    "limitations": [
+      "Not for interview preparation — use InterviewPreparation",
+      "Not for reviewing a resume independently — use ResumeReviewer",
+      "Should not be selected for general company research"
+    ],
+    "keywords": ["job description", "JD", "requirements", "skills match", "role analysis", "hiring", "fit score"],
+    "inputTypes": ["job description text", "job posting URL", "resume for comparison"],
+    "outputTypes": ["skill extraction", "fit score", "red flag report"],
+    "skillBody": [
+      "Parse job description into structured sections",
+      "Extract must-have vs nice-to-have skills",
+      "Identify compensation and culture signals",
+      "Score candidate fit if resume is provided",
+      "Flag unusual or concerning requirements"
+    ]
+  },
+  {
+    "id": "skill_034",
+    "name": "FinancialStatementAnalyzer",
+    "category": "Finance",
+    "description": "Analyzes financial statements (income statement, balance sheet, cash flow statement) to compute key ratios, identify trends, flag anomalies, and provide a structured financial health summary.",
+    "triggerConditions": [
+      "User uploads or provides financial statements for analysis",
+      "User wants to understand a company's financial health or performance",
+      "User needs specific financial ratios computed from statements"
+    ],
+    "examples": [
+      "Analyze this company's income statement for the last 3 years",
+      "What is the debt-to-equity ratio from this balance sheet?",
+      "Identify any financial red flags in these quarterly statements"
+    ],
+    "limitations": [
+      "Not for financial forecasting — use FinancialForecaster",
+      "Not for personal budgeting — use BudgetPlanner",
+      "Does not provide investment advice"
+    ],
+    "keywords": ["financial statements", "income statement", "balance sheet", "cash flow", "ratios", "financial health"],
+    "inputTypes": ["financial statement PDF", "spreadsheet", "structured financial data"],
+    "outputTypes": ["ratio analysis", "financial health summary", "anomaly report"],
+    "skillBody": [
+      "Parse income statement, balance sheet, and cash flow data",
+      "Compute key financial ratios (P/E, ROE, debt-to-equity, etc.)",
+      "Identify year-over-year trends",
+      "Flag anomalies or concerning metrics",
+      "Return structured financial health summary"
+    ]
+  },
+  {
+    "id": "skill_035",
+    "name": "FinancialForecaster",
+    "category": "Finance",
+    "description": "Builds financial forecasts and projections using historical data and assumptions. Supports revenue forecasting, expense modeling, cash flow projection, and scenario analysis (base, bull, bear cases).",
+    "triggerConditions": [
+      "User wants to project future financial performance",
+      "User provides historical financials and asks for a forecast",
+      "User wants to model different financial scenarios"
+    ],
+    "examples": [
+      "Project our revenue for the next 12 months based on current growth rate",
+      "Build a 3-year cash flow forecast with base and bear case scenarios",
+      "Model the financial impact of hiring 10 new engineers next quarter"
+    ],
+    "limitations": [
+      "Not for analyzing historical statements — use FinancialStatementAnalyzer",
+      "Not for personal budgeting — use BudgetPlanner",
+      "Forecasts are probabilistic estimates, not guarantees"
+    ],
+    "keywords": ["forecast", "projection", "financial model", "scenario analysis", "revenue", "cash flow", "planning"],
+    "inputTypes": ["historical financials", "growth assumptions", "headcount data"],
+    "outputTypes": ["forecast model", "scenario comparison", "projection spreadsheet"],
+    "skillBody": [
+      "Ingest historical financial data",
+      "Apply growth and cost assumptions",
+      "Build base, bull, and bear case models",
+      "Project monthly or quarterly figures",
+      "Return formatted forecast with scenario comparison"
+    ]
+  },
+  {
+    "id": "skill_036",
+    "name": "BudgetPlanner",
+    "category": "Finance",
+    "description": "Helps individuals or teams plan and track budgets. Creates budget templates, allocates spending categories, tracks actuals vs. budget, and flags overspending. Supports personal finance and departmental budgeting.",
+    "triggerConditions": [
+      "User wants to create or review a budget",
+      "User asks for help managing personal or team spending",
+      "User wants to track expenses against a budget"
+    ],
+    "examples": [
+      "Create a monthly personal budget based on my income of $6,000",
+      "Build a Q1 marketing department budget template",
+      "I'm overspending — help me identify where to cut in my budget"
+    ],
+    "limitations": [
+      "Not for forecasting business financials — use FinancialForecaster",
+      "Not for analyzing corporate financial statements — use FinancialStatementAnalyzer",
+      "Does not connect to bank accounts without explicit integration"
+    ],
+    "keywords": ["budget", "spending", "personal finance", "expense tracking", "allocation", "overspend"],
+    "inputTypes": ["income data", "expense categories", "actuals spreadsheet"],
+    "outputTypes": ["budget plan", "variance report"],
+    "skillBody": [
+      "Gather income and expense inputs",
+      "Allocate spending by category",
+      "Compare actuals to budget targets",
+      "Flag categories with overspending",
+      "Return budget plan or variance summary"
+    ]
+  },
+  {
+    "id": "skill_037",
+    "name": "InvoiceProcessor",
+    "category": "Finance",
+    "description": "Extracts structured data from invoice PDFs or images including vendor, line items, amounts, tax, due dates, and payment terms. Can validate invoices against purchase orders and flag discrepancies.",
+    "triggerConditions": [
+      "User uploads an invoice and needs data extracted",
+      "User wants to validate an invoice against a purchase order",
+      "User is processing invoices for accounting or accounts payable workflows"
+    ],
+    "examples": [
+      "Extract all line items and totals from this invoice PDF",
+      "Validate this invoice against our purchase order and flag mismatches",
+      "Process these 20 invoices and output a structured CSV of all data"
+    ],
+    "limitations": [
+      "Not for generating new invoices — use InvoiceGenerator",
+      "Not for general PDF reading — use PDFReader for non-invoice documents",
+      "Accuracy may decrease with handwritten or poorly scanned invoices"
+    ],
+    "keywords": ["invoice", "AP", "accounts payable", "line items", "vendor", "extract", "validate"],
+    "inputTypes": ["invoice PDF", "invoice image"],
+    "outputTypes": ["structured invoice data", "CSV export", "validation report"],
+    "skillBody": [
+      "Load invoice file and apply OCR if needed",
+      "Extract vendor, date, line items, taxes, and totals",
+      "Validate against purchase order if provided",
+      "Flag discrepancies or missing fields",
+      "Return structured invoice data or CSV"
+    ]
+  },
+  {
+    "id": "skill_038",
+    "name": "InvoiceGenerator",
+    "category": "Finance",
+    "description": "Creates professional invoices as PDFs or structured documents from provided billing data. Supports line items, tax calculations, payment terms, and branded templates. Can integrate with CRM or billing data sources.",
+    "triggerConditions": [
+      "User wants to create an invoice to send to a client",
+      "User provides billing details and asks for an invoice to be generated",
+      "User needs a formatted invoice document or PDF"
+    ],
+    "examples": [
+      "Generate an invoice for $4,500 in consulting services for Acme Corp due in 30 days",
+      "Create a branded invoice from this project billing summary",
+      "Generate invoices for all completed orders in this spreadsheet"
+    ],
+    "limitations": [
+      "Not for processing or reading incoming invoices — use InvoiceProcessor",
+      "Does not submit invoices to payment processing systems",
+      "Not for general PDF creation — use PDFGenerator"
+    ],
+    "keywords": ["invoice", "billing", "create invoice", "generate", "client billing", "AR", "accounts receivable"],
+    "inputTypes": ["billing details", "client info", "line items"],
+    "outputTypes": ["PDF invoice", "invoice document"],
+    "skillBody": [
+      "Receive billing data (client, items, amounts)",
+      "Calculate totals, taxes, and due dates",
+      "Apply branded template and formatting",
+      "Render as PDF or structured document",
+      "Return finalized invoice file"
+    ]
+  },
+  {
+    "id": "skill_039",
+    "name": "ProjectPlanGenerator",
+    "category": "Project Management",
+    "description": "Creates structured project plans with phases, milestones, tasks, dependencies, timelines, and resource assignments. Supports Gantt-style output and can initialize plans in connected project management tools.",
+    "triggerConditions": [
+      "User wants to plan a new project from scratch",
+      "User asks for a project roadmap or work breakdown structure",
+      "User describes a goal and wants it decomposed into a structured project plan"
+    ],
+    "examples": [
+      "Create a project plan for a website redesign launching in 3 months",
+      "Build a work breakdown structure for a mobile app development project",
+      "Generate a Gantt chart plan for our product launch campaign"
+    ],
+    "limitations": [
+      "Not for individual task management — use TaskManager",
+      "Not for tracking ongoing project status — use ProjectStatusTracker",
+      "Should not be selected for meeting agendas — use MeetingAgendaBuilder"
+    ],
+    "keywords": ["project plan", "roadmap", "Gantt", "milestones", "WBS", "phases", "timeline"],
+    "inputTypes": ["project description", "goals", "deadline", "team resources"],
+    "outputTypes": ["project plan", "Gantt chart", "WBS document"],
+    "skillBody": [
+      "Break goal into phases and deliverables",
+      "Define tasks, dependencies, and milestones",
+      "Assign durations and resources",
+      "Generate Gantt or timeline view",
+      "Export to connected project management tool"
+    ]
+  },
+  {
+    "id": "skill_040",
+    "name": "ProjectStatusTracker",
+    "category": "Project Management",
+    "description": "Monitors and reports on project progress by querying connected project management tools. Produces status summaries showing completed tasks, blockers, at-risk milestones, and upcoming deadlines.",
+    "triggerConditions": [
+      "User wants a status update on an ongoing project",
+      "User asks what has been completed or what is blocked",
+      "User needs a progress report for stakeholders"
+    ],
+    "examples": [
+      "What's the current status of the Q3 product launch project?",
+      "Which milestones are at risk this sprint?",
+      "Generate a weekly project status report for the engineering team"
+    ],
+    "limitations": [
+      "Requires connected project management tool with current data",
+      "Not for creating new project plans — use ProjectPlanGenerator",
+      "Not for individual task creation — use TaskManager"
+    ],
+    "keywords": ["project status", "progress", "blockers", "milestones", "at-risk", "status report"],
+    "inputTypes": ["project name", "project ID"],
+    "outputTypes": ["status report", "progress summary"],
+    "skillBody": [
+      "Query connected PM tool for task and milestone data",
+      "Compute completion percentages by phase",
+      "Flag blocked or at-risk items",
+      "Identify upcoming deadlines",
+      "Return formatted status report"
+    ]
+  },
+  {
+    "id": "skill_041",
+    "name": "RiskAssessor",
+    "category": "Project Management",
+    "description": "Identifies, evaluates, and prioritizes project or business risks. Produces a risk register with likelihood, impact, mitigation strategies, and owners. Supports operational, financial, and technical risk types.",
+    "triggerConditions": [
+      "User wants to identify risks in a project or business initiative",
+      "User asks for a risk register or risk analysis",
+      "User is preparing for a risk review meeting"
+    ],
+    "examples": [
+      "Identify the top risks for our cloud migration project",
+      "Create a risk register for our new product launch",
+      "What are the biggest operational risks of expanding to a new market?"
+    ],
+    "limitations": [
+      "Not for general project planning — use ProjectPlanGenerator",
+      "Not for financial forecasting — use FinancialForecaster",
+      "Does not replace professional risk assessment for regulated industries"
+    ],
+    "keywords": ["risk", "risk register", "mitigation", "likelihood", "impact", "business risk"],
+    "inputTypes": ["project description", "business context", "initiative brief"],
+    "outputTypes": ["risk register", "risk matrix"],
+    "skillBody": [
+      "Identify risks from project or business context",
+      "Score each risk by likelihood and impact",
+      "Categorize risks (operational, technical, financial, etc.)",
+      "Propose mitigation strategies and owners",
+      "Return a prioritized risk register"
+    ]
+  },
+  {
+    "id": "skill_042",
+    "name": "KnowledgeBaseBuilder",
+    "category": "Knowledge Management",
+    "description": "Organizes and structures information into a searchable knowledge base. Ingests documents, notes, and URLs, extracts key concepts, and creates linked entries with tags and categories.",
+    "triggerConditions": [
+      "User wants to build or populate an internal knowledge base",
+      "User has a collection of documents to organize into a structured resource",
+      "User wants to make institutional knowledge searchable"
+    ],
+    "examples": [
+      "Turn these 15 internal documents into a structured knowledge base",
+      "Build a searchable FAQ from these support tickets",
+      "Organize our onboarding materials into a tagged knowledge base"
+    ],
+    "limitations": [
+      "Not for querying an existing knowledge base — use KnowledgeBaseSearcher",
+      "Not for general document creation — use WordDocumentCreator",
+      "Should not be selected for summarizing a single document"
+    ],
+    "keywords": ["knowledge base", "organize", "structure", "wiki", "FAQ", "internal docs", "taxonomy"],
+    "inputTypes": ["documents", "URLs", "notes", "text content"],
+    "outputTypes": ["knowledge base entries", "structured wiki"],
+    "skillBody": [
+      "Ingest source documents and URLs",
+      "Extract key concepts and entities",
+      "Create structured entries with summaries",
+      "Apply tags and categories",
+      "Link related entries for discoverability"
+    ]
+  },
+  {
+    "id": "skill_043",
+    "name": "KnowledgeBaseSearcher",
+    "category": "Knowledge Management",
+    "description": "Searches an existing connected knowledge base or document repository to answer specific questions. Uses semantic search to find the most relevant entries and surfaces cited answers.",
+    "triggerConditions": [
+      "User asks a question that should be answered from internal documentation",
+      "User wants to find specific information in a company knowledge base",
+      "User asks 'do we have a doc on...' or similar"
+    ],
+    "examples": [
+      "What is our refund policy according to the internal docs?",
+      "Find documentation on how to configure SSO in our product",
+      "Search the knowledge base for anything related to GDPR compliance"
+    ],
+    "limitations": [
+      "Requires a connected knowledge base or document repository",
+      "Not for building or populating a knowledge base — use KnowledgeBaseBuilder",
+      "Cannot search the public web — use WebResearchSummarizer"
+    ],
+    "keywords": ["knowledge search", "internal docs", "semantic search", "find document", "Q&A", "knowledge retrieval"],
+    "inputTypes": ["natural language question", "keyword"],
+    "outputTypes": ["cited answer", "document reference list"],
+    "skillBody": [
+      "Parse and embed the search query",
+      "Run semantic search over knowledge base",
+      "Rank results by relevance",
+      "Extract most relevant passages",
+      "Return cited answer with source references"
+    ]
+  },
+  {
+    "id": "skill_044",
+    "name": "DocumentSummarizer",
+    "category": "Knowledge Management",
+    "description": "Produces concise, structured summaries of long documents, reports, or articles. Supports key-point extraction, executive summaries, and custom summary formats (bullets, narrative, TLDR).",
+    "triggerConditions": [
+      "User provides a long document and wants it condensed",
+      "User asks for a TLDR or executive summary of a document",
+      "User wants key points extracted from a lengthy report"
+    ],
+    "examples": [
+      "Summarize this 40-page strategy document in 5 bullet points",
+      "Give me a TLDR of this research report",
+      "Write an executive summary of this annual report"
+    ],
+    "limitations": [
+      "Not for deep analysis of academic papers — use AcademicPaperAnalyzer",
+      "Not for extracting structured data from invoices or forms",
+      "Should not replace full document reading for legal or compliance review"
+    ],
+    "keywords": ["summarize", "TLDR", "executive summary", "condense", "key points", "abstract"],
+    "inputTypes": ["document", "PDF", "text", "URL"],
+    "outputTypes": ["summary", "bullet points", "executive summary"],
+    "skillBody": [
+      "Load and chunk the input document",
+      "Identify main arguments and supporting points",
+      "Condense content to target length",
+      "Format as requested (bullets, narrative, TLDR)",
+      "Return final summary"
+    ]
+  },
+  {
+    "id": "skill_045",
+    "name": "SOPGenerator",
+    "category": "Knowledge Management",
+    "description": "Creates Standard Operating Procedure (SOP) documents from process descriptions, interviews, or existing notes. Produces step-by-step procedures with decision points, roles, and compliance notes.",
+    "triggerConditions": [
+      "User wants to document a process as an SOP",
+      "User describes a workflow and wants it formalized",
+      "User asks for a step-by-step procedure document"
+    ],
+    "examples": [
+      "Write an SOP for our employee onboarding process",
+      "Turn this process description into a formal SOP document",
+      "Create a step-by-step procedure for handling customer escalations"
+    ],
+    "limitations": [
+      "Not for general document creation — use WordDocumentCreator",
+      "Not for project planning — use ProjectPlanGenerator",
+      "Should not replace domain-expert review for safety-critical SOPs"
+    ],
+    "keywords": ["SOP", "standard operating procedure", "process documentation", "workflow", "step-by-step", "procedure"],
+    "inputTypes": ["process description", "interview notes", "existing draft"],
+    "outputTypes": ["SOP document"],
+    "skillBody": [
+      "Elicit process steps from input",
+      "Identify roles, decision points, and exceptions",
+      "Structure as numbered steps with sub-steps",
+      "Add compliance and safety notes where relevant",
+      "Format and export as a professional SOP document"
+    ]
+  },
+  {
+    "id": "skill_046",
+    "name": "ContentWriter",
+    "category": "Communication",
+    "description": "Creates original long-form written content including blog posts, articles, LinkedIn posts, social media copy, product descriptions, and marketing copy. Adapts tone, style, and length to platform and audience.",
+    "triggerConditions": [
+      "User wants to create marketing, editorial, or social content",
+      "User asks for a blog post, article, or social media copy",
+      "User needs written content for a specific audience or channel"
+    ],
+    "examples": [
+      "Write a 1,000-word blog post on the future of remote work",
+      "Create 5 LinkedIn post variations for our product launch",
+      "Write a product description for our new analytics dashboard"
+    ],
+    "limitations": [
+      "Not for drafting formal emails — use EmailDraftComposer",
+      "Not for technical documentation — use SOPGenerator or WordDocumentCreator",
+      "Should not be selected for academic writing or citations"
+    ],
+    "keywords": ["blog post", "article", "content writing", "copy", "social media", "marketing", "LinkedIn"],
+    "inputTypes": ["topic", "audience description", "tone brief", "keywords"],
+    "outputTypes": ["written content", "blog post", "social copy"],
+    "skillBody": [
+      "Clarify topic, audience, tone, and length",
+      "Research topic if needed",
+      "Draft structured content with intro, body, and conclusion",
+      "Optimize for SEO or platform if specified",
+      "Return polished, ready-to-publish content"
+    ]
+  },
+  {
+    "id": "skill_047",
+    "name": "ToneRewriter",
+    "category": "Communication",
+    "description": "Rewrites existing text in a specified tone or style (formal, casual, assertive, empathetic, persuasive, simplified). Preserves original meaning while adapting register, vocabulary, and sentence structure.",
+    "triggerConditions": [
+      "User provides text and asks for it to be rewritten in a different tone",
+      "User wants to simplify, formalize, or energize existing content",
+      "User asks to adapt copy for a different audience"
+    ],
+    "examples": [
+      "Rewrite this email to sound more empathetic and less blunt",
+      "Make this technical paragraph easier to understand for a non-technical audience",
+      "Rewrite this blog post intro to be more punchy and engaging"
+    ],
+    "limitations": [
+      "Not for generating new content from scratch — use ContentWriter",
+      "Not for translating to another language — use LanguageTranslator",
+      "Should not be used for legally binding documents without expert review"
+    ],
+    "keywords": ["rewrite", "tone", "style", "simplify", "formalize", "adapt", "voice"],
+    "inputTypes": ["existing text", "target tone description"],
+    "outputTypes": ["rewritten text"],
+    "skillBody": [
+      "Parse original text and identify current tone",
+      "Understand target tone or audience",
+      "Adjust vocabulary, sentence structure, and register",
+      "Preserve original meaning and key information",
+      "Return rewritten text with tone applied"
+    ]
+  },
+  {
+    "id": "skill_048",
+    "name": "LanguageTranslator",
+    "category": "Communication",
+    "description": "Translates text or documents between languages while preserving meaning, tone, and formatting. Supports over 50 languages and handles idiomatic expressions, domain-specific terminology, and cultural nuance.",
+    "triggerConditions": [
+      "User wants text translated into another language",
+      "User provides content in one language and asks for it in another",
+      "User wants to localize a document or message"
+    ],
+    "examples": [
+      "Translate this contract summary from English to Spanish",
+      "Convert this product description into French and German",
+      "Translate this customer support email from Japanese to English"
+    ],
+    "limitations": [
+      "Not for tone rewriting in the same language — use ToneRewriter",
+      "Not for legal or certified translation requiring human translators",
+      "Complex idiomatic content may require human review"
+    ],
+    "keywords": ["translate", "language", "localize", "Spanish", "French", "multilingual", "i18n"],
+    "inputTypes": ["text", "document", "target language"],
+    "outputTypes": ["translated text", "translated document"],
+    "skillBody": [
+      "Detect source language if not specified",
+      "Apply domain-appropriate translation model",
+      "Preserve formatting and structure",
+      "Handle idiomatic expressions culturally",
+      "Return translated content in target language"
+    ]
+  },
+  {
+    "id": "skill_049",
+    "name": "DataPipelineBuilder",
+    "category": "Software Engineering",
+    "description": "Designs and generates code for data pipelines including ETL workflows, data ingestion scripts, transformation logic, and scheduling configurations. Supports Python, SQL, and common orchestration frameworks.",
+    "triggerConditions": [
+      "User wants to build a data pipeline or ETL workflow",
+      "User needs to move or transform data between systems",
+      "User asks for an ingestion or transformation script"
+    ],
+    "examples": [
+      "Build a Python ETL pipeline to move data from PostgreSQL to BigQuery daily",
+      "Create a data ingestion script for our S3 to Snowflake pipeline",
+      "Write a transformation job to normalize this raw events table"
+    ],
+    "limitations": [
+      "Not for executing code — use CodeExecutor",
+      "Not for querying databases directly — use SQLQueryRunner",
+      "Not for analyzing data — use SpreadsheetAnalyzer or SQLQueryRunner"
+    ],
+    "keywords": ["ETL", "data pipeline", "ingestion", "transformation", "workflow", "orchestration", "Airflow"],
+    "inputTypes": ["pipeline description", "source/target system specs", "data schema"],
+    "outputTypes": ["pipeline code", "DAG definition", "configuration file"],
+    "skillBody": [
+      "Understand source, target, and transformation requirements",
+      "Design pipeline architecture",
+      "Generate extraction, transformation, and loading code",
+      "Add error handling and logging",
+      "Return complete pipeline code or DAG definition"
+    ]
+  },
+  {
+    "id": "skill_050",
+    "name": "UserStoryWriter",
+    "category": "Project Management",
+    "description": "Converts product ideas, feature requests, or requirements into well-formed user stories following the standard 'As a [user], I want [goal], so that [benefit]' format. Includes acceptance criteria and story point estimates.",
+    "triggerConditions": [
+      "User wants to write user stories for a product feature",
+      "User has a feature idea and wants it broken into stories",
+      "User asks for acceptance criteria for a requirement"
+    ],
+    "examples": [
+      "Write user stories for a password reset feature",
+      "Convert this feature spec into 5 user stories with acceptance criteria",
+      "Break down the shopping cart feature into user stories for the sprint"
+    ],
+    "limitations": [
+      "Not for creating full project plans — use ProjectPlanGenerator",
+      "Not for managing or tracking tasks in a tool — use TaskManager",
+      "Not for technical specification documents — use WordDocumentCreator"
+    ],
+    "keywords": ["user story", "acceptance criteria", "agile", "sprint", "backlog", "feature", "product"],
+    "inputTypes": ["feature description", "requirements", "product brief"],
+    "outputTypes": ["user stories", "acceptance criteria list"],
+    "skillBody": [
+      "Parse feature or requirement input",
+      "Identify user personas and goals",
+      "Write stories in standard format",
+      "Define measurable acceptance criteria for each story",
+      "Estimate story points if requested"
+    ]
+  },
+  {
+    "id": "skill_051",
+    "name": "WebSearchFetcher",
+    "category": "Research",
+    "description": "Performs a raw web search using a text query or URL and returns unprocessed results including page URLs, document URLs (PDFs, docs), and raw extracted text from each result page. Does not summarize or synthesize — returns raw source material for downstream processing.",
+    "triggerConditions": [
+      "User wants raw web search results without summarization",
+      "User provides a URL and wants its raw content fetched",
+      "User wants to see source text directly from a website",
+      "User needs a list of URLs and their unprocessed page content",
+      "User explicitly asks to fetch or scrape web content"
+    ],
+    "examples": [
+      "Fetch the raw content of this URL: https://example.com/article",
+      "Search for 'LangChain documentation embeddings' and return the raw results",
+      "Get me the raw text from the top 5 results for this query",
+      "Fetch the document at this PDF URL and return its raw text",
+      "Scrape this webpage and give me the raw HTML text"
+    ],
+    "limitations": [
+      "Does not summarize or synthesize results — use WebResearchSummarizer for that",
+      "Cannot access pages behind authentication or paywalls",
+      "Not suitable for academic paper analysis — use AcademicPaperAnalyzer",
+      "May return noisy or unstructured content depending on the source website",
+      "Not intended for fact-checking — use FactChecker for that"
+    ],
+    "keywords": ["web search", "fetch", "scrape", "raw results", "URL", "page content", "text extraction", "search results", "document URL", "crawl"],
+    "inputTypes": ["URL", "text search query"],
+    "outputTypes": ["list of result URLs", "document URLs", "raw page text"],
+    "skillBody": [
+      "Accept a text query or direct URL as input",
+      "Execute web search or HTTP fetch against the target URL",
+      "Extract raw text content from each result page",
+      "Identify and collect document URLs (PDFs, DOCX, etc.) found in results",
+      "Return structured list of results with URL, document URL if present, and raw extracted text"
+    ]
+  }
+]

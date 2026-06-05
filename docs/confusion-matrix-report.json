@@ -1,0 +1,483 @@
+{
+  "globalMetrics": {
+    "totalTasks": 180,
+    "exactMatchAccuracy": 0.8444444444444444,
+    "hammingAccuracy": 0.9959694989106754,
+    "micro": {
+      "tp": 206,
+      "fp": 13,
+      "fn": 24,
+      "tn": 8937,
+      "precision": 0.9406392694063926,
+      "recall": 0.8956521739130435,
+      "f1": 0.9175946547884187
+    },
+    "macro": {
+      "precision": 0.9518207282913166,
+      "recall": 0.899253034547152,
+      "f1": 0.9247904599418582,
+      "activeSkillsCount": 51
+    }
+  },
+  "perSkillMetrics": {
+    "WebResearchSummarizer": {
+      "precision": 0.8333333333333334,
+      "recall": 1,
+      "f1": 0.9090909090909091,
+      "tp": 5,
+      "fp": 1,
+      "fn": 0,
+      "tn": 174
+    },
+    "AcademicPaperAnalyzer": {
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.888888888888889,
+      "tp": 4,
+      "fp": 0,
+      "fn": 1,
+      "tn": 175
+    },
+    "CompetitorIntelligenceGatherer": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 174
+    },
+    "FactChecker": {
+      "precision": 1,
+      "recall": 0.42857142857142855,
+      "f1": 0.6,
+      "tp": 3,
+      "fp": 0,
+      "fn": 4,
+      "tn": 173
+    },
+    "CalendarEventScheduler": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 175
+    },
+    "MeetingOptimizer": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 177
+    },
+    "TaskManager": {
+      "precision": 0.8333333333333334,
+      "recall": 1,
+      "f1": 0.9090909090909091,
+      "tp": 5,
+      "fp": 1,
+      "fn": 0,
+      "tn": 174
+    },
+    "EmailDraftComposer": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "tn": 173
+    },
+    "EmailSender": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "SlackMessageComposer": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "MeetingNotesTranscriber": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 174
+    },
+    "MeetingAgendaBuilder": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 177
+    },
+    "GitHubIssueReader": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "GitHubIssueCreator": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "GitHubPRReviewer": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 175
+    },
+    "GitHubRepoAnalyzer": {
+      "precision": 0.8571428571428571,
+      "recall": 1,
+      "f1": 0.923076923076923,
+      "tp": 6,
+      "fp": 1,
+      "fn": 0,
+      "tn": 173
+    },
+    "CodeDebugger": {
+      "precision": 0.8333333333333334,
+      "recall": 1,
+      "f1": 0.9090909090909091,
+      "tp": 5,
+      "fp": 1,
+      "fn": 0,
+      "tn": 174
+    },
+    "CodeGenerator": {
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.888888888888889,
+      "tp": 4,
+      "fp": 0,
+      "fn": 1,
+      "tn": 175
+    },
+    "CodeExplainer": {
+      "precision": 0.8,
+      "recall": 1,
+      "f1": 0.888888888888889,
+      "tp": 4,
+      "fp": 1,
+      "fn": 0,
+      "tn": 175
+    },
+    "CodeExecutor": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 175
+    },
+    "PDFReader": {
+      "precision": 0.5714285714285714,
+      "recall": 1,
+      "f1": 0.7272727272727273,
+      "tp": 4,
+      "fp": 3,
+      "fn": 0,
+      "tn": 173
+    },
+    "PDFGenerator": {
+      "precision": 1,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "tn": 177
+    },
+    "PDFFormFiller": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 178
+    },
+    "SpreadsheetAnalyzer": {
+      "precision": 1,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "tp": 3,
+      "fp": 0,
+      "fn": 1,
+      "tn": 176
+    },
+    "SpreadsheetEditor": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "DataVisualizer": {
+      "precision": 1,
+      "recall": 0.8333333333333334,
+      "f1": 0.9090909090909091,
+      "tp": 5,
+      "fp": 0,
+      "fn": 1,
+      "tn": 174
+    },
+    "SQLQueryRunner": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 175
+    },
+    "ReportGenerator": {
+      "precision": 0.7142857142857143,
+      "recall": 0.8333333333333334,
+      "f1": 0.7692307692307692,
+      "tp": 5,
+      "fp": 2,
+      "fn": 1,
+      "tn": 172
+    },
+    "WordDocumentCreator": {
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.888888888888889,
+      "tp": 4,
+      "fp": 0,
+      "fn": 1,
+      "tn": 175
+    },
+    "DocumentReader": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "tn": 177
+    },
+    "ResumeReviewer": {
+      "precision": 1,
+      "recall": 0.4,
+      "f1": 0.5714285714285715,
+      "tp": 2,
+      "fp": 0,
+      "fn": 3,
+      "tn": 175
+    },
+    "InterviewPreparation": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "JobDescriptionAnalyzer": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "FinancialStatementAnalyzer": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 174
+    },
+    "FinancialForecaster": {
+      "precision": 0.8,
+      "recall": 1,
+      "f1": 0.888888888888889,
+      "tp": 4,
+      "fp": 1,
+      "fn": 0,
+      "tn": 175
+    },
+    "BudgetPlanner": {
+      "precision": 1,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "tp": 3,
+      "fp": 0,
+      "fn": 1,
+      "tn": 176
+    },
+    "InvoiceProcessor": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "InvoiceGenerator": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "ProjectPlanGenerator": {
+      "precision": 1,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "tp": 3,
+      "fp": 0,
+      "fn": 1,
+      "tn": 176
+    },
+    "ProjectStatusTracker": {
+      "precision": 1,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "tp": 3,
+      "fp": 0,
+      "fn": 1,
+      "tn": 176
+    },
+    "RiskAssessor": {
+      "precision": 1,
+      "recall": 0.8333333333333334,
+      "f1": 0.9090909090909091,
+      "tp": 5,
+      "fp": 0,
+      "fn": 1,
+      "tn": 174
+    },
+    "KnowledgeBaseBuilder": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 174
+    },
+    "KnowledgeBaseSearcher": {
+      "precision": 0.8,
+      "recall": 1,
+      "f1": 0.888888888888889,
+      "tp": 4,
+      "fp": 1,
+      "fn": 0,
+      "tn": 175
+    },
+    "DocumentSummarizer": {
+      "precision": 1,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "tp": 3,
+      "fp": 0,
+      "fn": 1,
+      "tn": 176
+    },
+    "SOPGenerator": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "ContentWriter": {
+      "precision": 1,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "tp": 4,
+      "fp": 0,
+      "fn": 2,
+      "tn": 174
+    },
+    "ToneRewriter": {
+      "precision": 1,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "tp": 3,
+      "fp": 0,
+      "fn": 1,
+      "tn": 176
+    },
+    "LanguageTranslator": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "DataPipelineBuilder": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 176
+    },
+    "UserStoryWriter": {
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.888888888888889,
+      "tp": 4,
+      "fp": 0,
+      "fn": 1,
+      "tn": 175
+    },
+    "WebSearchFetcher": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 179
+    }
+  }
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "task_151",
+    "category": "Research",
+    "difficulty": "Medium",
+    "query": "Our CMO is going on stage at TechCrunch tomorrow and plans to quote the statistic that 'AI will add $15.7 trillion to the global economy by 2030.' She wants to make sure that number is bulletproof before she says it in front of 2,000 people.",
+    "relevantSkills": ["FactChecker"],
+    "rationale": "Framed as pre-presentation risk management, not research. The task is to verify a single named statistic against authoritative sources — the core function of FactChecker. A naive router may pick WebResearchSummarizer (sounds like research into AI economics) but the request is tightly scoped to sourced confirmation or contradiction of one specific claim, not topic synthesis. The tricky routing signal is 'make sure that number is bulletproof' rather than 'check' or 'verify'."
+  },
+  {
+    "id": "task_152",
+    "category": "Data Analysis",
+    "difficulty": "Hard",
+    "query": "Marketing dropped last quarter's campaign performance CSV in my inbox. It's a mess — duplicates everywhere, inconsistent region labels, and several blanks in the revenue column. Once it's clean, I need a chart the CMO can actually read in her QBR prep showing which channels drove conversions at a glance.",
+    "relevantSkills": ["SpreadsheetAnalyzer", "SpreadsheetEditor", "DataVisualizer"],
+    "rationale": "Three sequential steps bundled into one request: SpreadsheetAnalyzer identifies the quality issues (duplicates, label inconsistencies, missing values), SpreadsheetEditor applies the cleaning and standardization, DataVisualizer produces the channel-performance chart. The request reads as 'make me a chart' and a naive router selects only DataVisualizer; the cleaning dependency is the critical non-obvious routing signal. Missing SpreadsheetAnalyzer means the editor operates blind; missing SpreadsheetEditor means the chart is built on dirty data."
+  },
+  {
+    "id": "task_153",
+    "category": "Productivity",
+    "difficulty": "Hard",
+    "query": "Here is the Zoom transcript from yesterday's sprint retro. Three different people made commitments during the call, and historically nothing ever gets done because nobody tracks it. Pull out what everyone agreed to do and make sure those items land in Linear.",
+    "relevantSkills": ["MeetingNotesTranscriber", "TaskManager"],
+    "rationale": "MeetingNotesTranscriber processes the raw transcript and extracts action items with attributed owners; TaskManager creates the corresponding tasks in the connected tool (Linear). 'Pull out what everyone agreed to do' does not name either skill. 'Make sure those items land in Linear' sounds like project management but is specifically task creation in a connected tool, not calendar scheduling or meeting planning. The false-positive risk is ProjectStatusTracker (sounds like tracking) or CalendarEventScheduler."
+  },
+  {
+    "id": "task_154",
+    "category": "Miscellaneous",
+    "difficulty": "Hard",
+    "query": "I need a photorealistic hero image for our product launch landing page — something that evokes speed and precision, dark blue and gold color palette, 1920x1080 resolution. Needs to look like it could sit on Apple's website.",
+    "relevantSkills": [],
+    "rationale": "No installed skill handles image generation or creative visual synthesis. ContentWriter produces text; PDFGenerator and DataVisualizer produce documents and data charts; none covers photorealistic image creation. This is a genuine capability gap in the catalog. A router that always returns its top-k best guesses would incorrectly surface DataVisualizer or ContentWriter — the 'nothing fits' signal should fire."
+  },
+  {
+    "id": "task_155",
+    "category": "Finance",
+    "difficulty": "Hard",
+    "query": "Our biggest client's procurement team kicked back the invoice we sent last week. They say the line items don't match the purchase order they issued in April. I need to figure out exactly what is mismatched and get them a corrected version today.",
+    "relevantSkills": ["InvoiceProcessor", "InvoiceGenerator"],
+    "rationale": "InvoiceProcessor extracts and validates the disputed invoice against the client's PO, surfacing the specific discrepancies; InvoiceGenerator produces the corrected invoice with the right line items and totals. 'Figure out exactly what is mismatched' does not name InvoiceProcessor; 'corrected version' could mislead toward EmailSender (sending it) or SpreadsheetEditor (editing a spreadsheet). Both finance skills are needed sequentially and neither appears in the query vocabulary."
+  },
+  {
+    "id": "task_156",
+    "category": "Research",
+    "difficulty": "Hard",
+    "query": "We are presenting to the board next quarter on whether to expand into Southeast Asian markets. I need something I can actually hand them — not bullet notes, a proper executive document with sections and structure. And it needs to be grounded in what is actually happening in those markets right now, including who the serious local and global players are.",
+    "relevantSkills": ["WebResearchSummarizer", "CompetitorIntelligenceGatherer", "ReportGenerator"],
+    "rationale": "Three distinct roles: WebResearchSummarizer gathers current SEA market intelligence (economic conditions, regulatory environment, consumer trends); CompetitorIntelligenceGatherer profiles the local and global competitive players; ReportGenerator formats everything into a boardroom-structured document with an executive summary. A router may select only WebResearchSummarizer (general research) or only ReportGenerator (document creation) — either alone is insufficient. The hard case: WebResearchSummarizer and CompetitorIntelligenceGatherer are sibling skills that superficially look identical but have different scopes."
+  },
+  {
+    "id": "task_157",
+    "category": "Project Management",
+    "difficulty": "Medium",
+    "query": "The product team just got sign-off on adding multi-factor authentication. Engineering needs something they can pull directly into next sprint — break it down into the smallest independently shippable chunks, and for each one define exactly what 'done' looks like so there is no ambiguity at review time.",
+    "relevantSkills": ["UserStoryWriter"],
+    "rationale": "'Smallest independently shippable chunks with a definition of done' is the canonical description of user stories with acceptance criteria, which is exactly what UserStoryWriter produces. The query uses zero agile or product terminology that names the skill. 'Independently shippable' and 'definition of done' are the non-obvious routing signals. A router might select TaskManager (break it into tasks) or ProjectPlanGenerator (plan the feature), both category mismatches."
+  },
+  {
+    "id": "task_158",
+    "category": "Software Engineering",
+    "difficulty": "Hard",
+    "query": "Our payment service is throwing a NullPointerException on roughly 3% of checkout attempts in production. It only manifests when the customer has a saved payment method AND an active promotional discount applied at the same time. Here is the relevant handler method — I cannot find what is triggering it.",
+    "relevantSkills": ["CodeDebugger"],
+    "rationale": "Symptom-framed bug report: a named exception under a specific condition combination that the developer cannot locate. The routing signals are the named exception, the 'only happens when X AND Y' conditional, and 'I cannot find what is triggering it.' A router may pick CodeExplainer (user provides code and expresses confusion about it) or CodeGenerator (might interpret as wanting a replacement implementation). The distinguishing fact is that existing code is broken and needs root-cause analysis, not explanation or generation."
+  },
+  {
+    "id": "task_159",
+    "category": "Miscellaneous",
+    "difficulty": "Hard",
+    "query": "Update the deal stage for TechCorp in Salesforce to 'Closed Won', set the close date to today, and add a note that the contract was signed by their VP of Engineering.",
+    "relevantSkills": [],
+    "rationale": "CRM data mutation — record updates, deal stage transitions, activity logging in Salesforce — is not covered by any installed skill. TaskManager handles generic task management tools (Jira, Asana, Linear, Todoist) but does not integrate with CRM platforms. A router that maps 'update... add a note' to TaskManager would produce a false positive. The key signal for 'nothing fits': the action requires a Salesforce-specific integration that does not exist in this catalog."
+  },
+  {
+    "id": "task_160",
+    "category": "Software Engineering",
+    "difficulty": "Hard",
+    "query": "Before I green-light Carlos's merge request on the auth service, I want to make sure his changes do not accidentally resolve or create conflicts with anything the team is still actively tracking. Can you cross-reference what he changed with what is still open?",
+    "relevantSkills": ["GitHubIssueReader", "GitHubPRReviewer"],
+    "rationale": "GitHubPRReviewer analyzes the pull request diff and commit history; GitHubIssueReader fetches open issues in the repository to identify potential conflicts or accidental closures. 'Green-light the merge request' implies PR review; 'what is still open' implies reading open issues. The cross-reference operation requires both — the router must recognize that neither skill alone is sufficient and that this is not a GitHubRepoAnalyzer task (full repo audit, not a per-PR check)."
+  },
+  {
+    "id": "task_161",
+    "category": "Finance",
+    "difficulty": "Hard",
+    "query": "We are walking into a Series B pitch in six weeks. The lead investor specifically asked to see our financial trajectory — where we have actually been over the last three years, not just projections. And they want to see a credible view of where we think this goes over the next two years. I have the historical P&Ls.",
+    "relevantSkills": ["FinancialStatementAnalyzer", "FinancialForecaster"],
+    "rationale": "FinancialStatementAnalyzer processes the historical P&Ls to extract trends, key ratios, and inflection points; FinancialForecaster builds the 24-month forward projection grounded in those actuals. 'Where we have actually been' = historical statement analysis; 'where we think this goes' = forecasting. A router may select ReportGenerator for the pitch narrative (wrong: it formats, it does not compute) or FinancialForecaster alone (missing the historical analysis the projection depends on)."
+  },
+  {
+    "id": "task_162",
+    "category": "Knowledge Management",
+    "difficulty": "Medium",
+    "query": "An enterprise customer is asking whether we support SAML-based single sign-on. Before I tell them anything, I want to make sure I am not just making it up — check whether our own engineering or product team has documented our SSO capabilities anywhere internally.",
+    "relevantSkills": ["KnowledgeBaseSearcher"],
+    "rationale": "'Check whether our own team has documented anything' is the critical routing signal: this requires semantic search over internal documentation, not public web research. A router may select WebResearchSummarizer (research SSO) or FactChecker (verify an SSO claim) — both would search the public internet. KnowledgeBaseSearcher is the correct choice because the authoritative source is internal docs, not external. The medium difficulty comes from the clean internal-vs-external distinction a well-tuned router should catch."
+  },
+  {
+    "id": "task_163",
+    "category": "Communication",
+    "difficulty": "Hard",
+    "query": "Our engineering team wrote a highly technical whitepaper about our new inference architecture. I need to reach out to three enterprise CIOs who are business executives, not engineers. They need to understand why this matters commercially, not how it works mechanically. Help me put together the outreach.",
+    "relevantSkills": ["DocumentReader", "ToneRewriter", "EmailDraftComposer"],
+    "rationale": "Three skills in strict sequence: DocumentReader ingests the whitepaper and extracts its key content and claims; ToneRewriter adapts the technical language to a business-executive register without losing the substance; EmailDraftComposer structures it as a targeted outreach email per CIO. 'Put together the outreach' sounds like only a drafting task, causing a router to return only EmailDraftComposer and skip the two upstream steps. The whitepaper is the input that forces DocumentReader; the audience mismatch forces ToneRewriter."
+  },
+  {
+    "id": "task_164",
+    "category": "Miscellaneous",
+    "difficulty": "Hard",
+    "query": "Get our LinkedIn and Twitter posts out for the next two weeks. I have a content calendar CSV with the post text and the exact publish timestamps for each one. Just get them scheduled and publishing at the right times.",
+    "relevantSkills": [],
+    "rationale": "Scheduling and publishing content to social media platform APIs (LinkedIn, Twitter/X) is not supported by any installed skill. ContentWriter can draft social copy; SlackMessageComposer handles internal Slack; but no skill in the catalog connects to external social media publishing endpoints. A router that returns ContentWriter as a partial match would produce a misleading false positive — the task is publishing automation, not content creation."
+  },
+  {
+    "id": "task_165",
+    "category": "Productivity",
+    "difficulty": "Hard",
+    "query": "I need all five regional leads on a 90-minute QBR call sometime in the next two weeks. They are in London, Mumbai, São Paulo, Tokyo, and New York. Find a window that does not completely wreck anyone's evening, lock it in on everyone's calendar, and put together a run-of-show for whoever is facilitating.",
+    "relevantSkills": ["MeetingOptimizer", "CalendarEventScheduler", "MeetingAgendaBuilder"],
+    "rationale": "MeetingOptimizer identifies viable meeting windows across five time zones respecting working hours; CalendarEventScheduler books the event with all attendees once a slot is confirmed; MeetingAgendaBuilder produces the facilitator's structured guide. 'Run-of-show' is non-obvious vocabulary for a meeting agenda. All three skills are needed in sequence, none named. A router may return only CalendarEventScheduler (the scheduling action) or only MeetingAgendaBuilder (the document output), missing the multi-participant coordination step."
+  },
+  {
+    "id": "task_166",
+    "category": "Project Management",
+    "difficulty": "Hard",
+    "query": "We are about to migrate our entire payment infrastructure from Stripe to an in-house solution in 90 days. Before we write a single line of code, I want to know everything that could go wrong, how likely and how severe each scenario is, and I need an actual response playbook — not just a list of risks, but what we concretely do if each one materializes.",
+    "relevantSkills": ["RiskAssessor", "ProjectPlanGenerator"],
+    "rationale": "RiskAssessor identifies, scores, and prioritizes migration risks with likelihood and impact assessments; ProjectPlanGenerator creates the structured mitigation and response plan tied to each risk. 'Everything that could go wrong' = risk identification; 'concrete response playbook... what we do if each one materializes' = project planning for contingency execution. A router selecting only RiskAssessor produces the risk register but not the actionable response plan. The false negative on ProjectPlanGenerator is the key evaluation signal."
+  },
+  {
+    "id": "task_167",
+    "category": "Data Analysis",
+    "difficulty": "Hard",
+    "query": "The CEO asked me in today's all-hands: 'Why are we losing SMB customers?' I have until Monday to have something concrete on her desk — backed by actual numbers from our database, something visual to support the narrative, and a proper document she can forward to the board without embarrassment.",
+    "relevantSkills": ["SQLQueryRunner", "DataVisualizer", "ReportGenerator"],
+    "rationale": "Three deliverables in one request: SQLQueryRunner queries the database for SMB churn metrics; DataVisualizer produces supporting charts; ReportGenerator structures the analysis into a board-ready document. The query is framed as a strategic business question, which may mislead a router toward WebResearchSummarizer (research why SMBs churn) or FactChecker (verify the churn rate) — both wrong categories. The phrases 'actual numbers from our database' (SQLQueryRunner), 'something visual' (DataVisualizer), and 'proper document' (ReportGenerator) are the distributed routing signals."
+  },
+  {
+    "id": "task_168",
+    "category": "Miscellaneous",
+    "difficulty": "Hard",
+    "query": "I have an interview for a senior data scientist role at Airbnb next month. I have attached both the job posting and my CV. Tell me honestly how competitive I am, point out what is holding me back on paper, and make sure I am not walking in cold to the actual conversation.",
+    "relevantSkills": ["JobDescriptionAnalyzer", "ResumeReviewer", "InterviewPreparation"],
+    "rationale": "Three-stage career support workflow: JobDescriptionAnalyzer parses the Airbnb posting to extract required skills and experience bars; ResumeReviewer assesses the CV against those extracted requirements and identifies gaps; InterviewPreparation generates role-specific questions and coaching. 'How competitive I am' signals the JD-vs-CV fit analysis; 'what is holding me back on paper' signals resume review; 'not walking in cold to the actual conversation' is non-obvious vocabulary for interview prep. A router may return only ResumeReviewer, the most visible action, and miss the other two."
+  },
+  {
+    "id": "task_169",
+    "category": "Miscellaneous",
+    "difficulty": "Hard",
+    "query": "I have five raw screen recording clips from our product demo session. I need a 90-second cut-down version with our brand intro and outro, captions on the key feature moments, and some background music underneath. This is going on the product launch landing page.",
+    "relevantSkills": [],
+    "rationale": "Video editing, clip assembly, caption overlay, and audio mixing are not supported by any installed skill. PDFGenerator handles document export; DataVisualizer handles chart rendering; ContentWriter writes scripts — none of these cover video production. A router that returns ContentWriter (could write a video script) or DataVisualizer (visual output) would produce a harmful false positive, directing the agent toward a task it fundamentally cannot complete."
+  },
+  {
+    "id": "task_170",
+    "category": "Documents",
+    "difficulty": "Hard",
+    "query": "Our finance team does month-end close a different way every single cycle. I want to nail down exactly how it should be done, step by step, so any team member can pick it up without asking questions. And I need the final output in a format they can physically print out and keep at their desk.",
+    "relevantSkills": ["SOPGenerator", "WordDocumentCreator", "PDFGenerator"],
+    "rationale": "SOPGenerator formalizes the described process into structured step-by-step SOP documentation with decision points and roles; WordDocumentCreator formats it with professional headers, numbering, and layout; PDFGenerator exports it as a printable, archivable PDF. 'Physically print and keep at their desk' is the non-obvious routing signal for PDF output specifically. A router may select only SOPGenerator or WordDocumentCreator, missing the print-ready export requirement entirely."
+  },
+  {
+    "id": "task_171",
+    "category": "Software Engineering",
+    "difficulty": "Hard",
+    "query": "I just got dropped into an unfamiliar Python repo and told to fix a bug in the authentication middleware causing intermittent 401s. I need to get my bearings in the overall codebase, make sense of the specific module where the issue lives, and then formally capture the bug so the whole team can track it properly.",
+    "relevantSkills": ["GitHubRepoAnalyzer", "CodeExplainer", "GitHubIssueCreator"],
+    "rationale": "GitHubRepoAnalyzer provides a structural overview of the unfamiliar codebase and maps the relevant modules; CodeExplainer explains the specific authentication middleware in plain language so the bug location can be understood; GitHubIssueCreator files the formally documented bug report. 'Get my bearings in the overall codebase' = repo analysis; 'make sense of the specific module' = code explanation; 'formally capture the bug so the team can track it' = issue creation. Three distinct skills, none named, with each depending on the prior one."
+  },
+  {
+    "id": "task_172",
+    "category": "Software Engineering",
+    "difficulty": "Hard",
+    "query": "Every morning I manually open our three main competitors' pricing pages to check for changes. I want to automate this: pull the raw content from those pages on a daily schedule and pipe it into our data warehouse so the product team can query pricing history any time they want.",
+    "relevantSkills": ["WebSearchFetcher", "DataPipelineBuilder"],
+    "rationale": "WebSearchFetcher retrieves the raw HTML content from the competitor URLs; DataPipelineBuilder creates the scheduled ingestion workflow that extracts, processes, and loads that content into the warehouse on a daily cadence. The task sounds like a monitoring or automation request — neither 'ETL' nor 'pipeline' appears. A router may surface CompetitorIntelligenceGatherer (competitor tracking, wrong — that synthesizes, it does not schedule raw ingestion) or CodeGenerator (write a script, wrong — DataPipelineBuilder handles pipeline architecture). These are the two key false-positive traps."
+  },
+  {
+    "id": "task_173",
+    "category": "Knowledge Management",
+    "difficulty": "Hard",
+    "query": "We have accumulated three years of process guides, onboarding docs, and meeting notes scattered across Notion and Google Drive. New hires waste their first week just trying to find things. I want to fix this permanently: cut out all the bloat and redundancy, and reorganize everything so it is actually findable and navigable.",
+    "relevantSkills": ["DocumentSummarizer", "KnowledgeBaseBuilder"],
+    "rationale": "DocumentSummarizer condenses and deduplicates the verbose, redundant documents down to their essential content before reorganization; KnowledgeBaseBuilder then structures the streamlined content into a tagged, searchable knowledge base with linked entries. 'Cut out the bloat and redundancy' = summarization; 'actually findable and navigable' = knowledge base construction. A router may return only KnowledgeBaseBuilder (the destination) and miss that the source documents need condensing first — building a knowledge base from unreduced bloat perpetuates the original problem."
+  },
+  {
+    "id": "task_174",
+    "category": "Miscellaneous",
+    "difficulty": "Hard",
+    "query": "A customer just reported they cannot log in to the platform. Open a support ticket in Zendesk, tag it as high priority and 'authentication', assign it to the Tier 2 queue, and link it to their account ID 48291.",
+    "relevantSkills": [],
+    "rationale": "Customer support platform operations — Zendesk ticket creation, priority tagging, queue assignment, account linking — are not covered by any installed skill. TaskManager handles engineering task tools (Jira, Asana, Linear, Todoist) but does not integrate with customer support platforms. GitHubIssueCreator handles repository bug tracking but not support ticketing. A router that maps this to TaskManager produces a false positive — the integration simply does not exist in this catalog."
+  },
+  {
+    "id": "task_175",
+    "category": "Research",
+    "difficulty": "Hard",
+    "query": "Our head of ML just published a paper on parameter-efficient fine-tuning. Marketing wants to ride the momentum with a company blog post, but they do not have the technical background to represent the work accurately without mangling the science. I need something technically honest but readable by working developers.",
+    "relevantSkills": ["AcademicPaperAnalyzer", "ContentWriter"],
+    "rationale": "AcademicPaperAnalyzer extracts the accurate methodology, findings, and contributions from the ML paper without distortion; ContentWriter produces developer-accessible blog content grounded in those verified findings. A router selecting only ContentWriter would generate a blog post that sounds plausible but misrepresents the research — the paper analysis step is essential for accuracy. The task reads as a content production request, fully obscuring the upstream analysis requirement."
+  },
+  {
+    "id": "task_176",
+    "category": "Finance",
+    "difficulty": "Hard",
+    "query": "We just closed the FY24 books. Finance confirmed we burned 40% over plan in engineering headcount and came in 60% below plan on marketing spend. I want to understand how we got so far off, and then I want a FY25 plan that is actually grounded in what happened — not what we wished would happen.",
+    "relevantSkills": ["FinancialStatementAnalyzer", "BudgetPlanner"],
+    "rationale": "FinancialStatementAnalyzer processes the FY24 actuals to compute variance analysis and diagnose the spending patterns; BudgetPlanner constructs the FY25 budget directly informed by those actuals and identified failure modes. 'How we got so far off' = variance and trend analysis of closed statements; 'grounded in what actually happened' = budget planning seeded by actuals, not arbitrary assumptions. A router may select FinancialForecaster instead of BudgetPlanner — a subtle category error: forecasting projects revenue trajectories; budgeting allocates spend targets. These are distinct skills with different inputs and outputs."
+  },
+  {
+    "id": "task_177",
+    "category": "Documents",
+    "difficulty": "Medium",
+    "query": "A vendor just sent over their standard master service agreement as a PDF. Our legal team who needs to review this before we sign is based in Mexico City. Make it accessible to them.",
+    "relevantSkills": ["PDFReader", "LanguageTranslator"],
+    "rationale": "PDFReader extracts the text from the PDF contract document; LanguageTranslator renders it in Spanish for the Mexico City legal team. 'Make it accessible to them' is deliberately indirect — the routing signals are the PDF format (requiring extraction before translation) and the Mexico City location (implying Spanish). A router focused only on the translation need misses the PDFReader prerequisite; a router focused on the PDF misses the translation output requirement. Both skills are essential in order."
+  },
+  {
+    "id": "task_178",
+    "category": "Documents",
+    "difficulty": "Hard",
+    "query": "Our new vendor sent over their standard supplier onboarding form as an interactive PDF — it has fields for our company name, registered address, payment terms preference, and tax identification number. Fill in our standard corporate details and get the completed form back to procurement@supplierco.com.",
+    "relevantSkills": ["PDFFormFiller", "EmailSender"],
+    "rationale": "PDFFormFiller populates the interactive PDF form fields with the company data; EmailSender delivers the completed PDF to the specified address. 'Fill in' = PDFFormFiller; 'get the completed form back to' = send via email. Neither skill name appears. The false-positive trap: 'get it back to' could surface EmailDraftComposer (composing a message) instead of EmailSender (the delivery action). The task is operational, not compositional — no email body needs to be drafted, only the attachment sent."
+  },
+  {
+    "id": "task_179",
+    "category": "Project Management",
+    "difficulty": "Hard",
+    "query": "Leadership is going into the all-hands in 45 minutes and they are about to get live questions about the mobile relaunch. Pull the latest on where things actually stand and post something concise in #exec-updates that they can reference during the call — they do not have time to log into Jira.",
+    "relevantSkills": ["ProjectStatusTracker", "SlackMessageComposer"],
+    "rationale": "ProjectStatusTracker queries the connected PM tool (Jira) to extract current project state, completion percentages, blockers, and at-risk milestones; SlackMessageComposer formats and posts the executive-readable summary to the Slack channel. 'Pull the latest on where things actually stand' = status query from a PM system; 'post something concise in #exec-updates' = Slack message. The urgency framing ('45 minutes') and 'they do not have time to log into Jira' are context clues that confirm a PM tool query is needed rather than manual knowledge."
+  },
+  {
+    "id": "task_180",
+    "category": "Software Engineering",
+    "difficulty": "Hard",
+    "query": "I need a function that takes a list of transaction objects and computes rolling 7-day and 30-day averages on the amount field. But I do not trust it until I see it working — run it against the sample inputs I am pasting below and show me the actual outputs before we put this anywhere near production.",
+    "relevantSkills": ["CodeGenerator", "CodeExecutor"],
+    "rationale": "CodeGenerator writes the rolling average function from the specification; CodeExecutor runs it against the provided sample inputs and returns verified outputs. 'I do not trust it until I see it working' and 'show me the actual outputs' are the explicit routing signals for CodeExecutor. A router may select only CodeGenerator, treating the verification request as implied rather than as a distinct required capability. This tests whether the router handles compound requests where the second skill is conditioned on the first completing."
+  }
+]
